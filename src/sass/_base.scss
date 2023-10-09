@@ -1,3 +1,5 @@
+@use "./abstracts/index" as *;
+
 *,
 *::before,
 *::after {
@@ -7,5 +9,13 @@
 * {
   margin: 0;
   padding: 0;
-  font: inherit; // even removes styling from headings too. uses classes to style things rather than elements
+  font: inherit; 
+}
+
+h1 {
+  color: $color-primary-brown;
+}
+
+p {
+  color: $color-secondary-100;
 }
