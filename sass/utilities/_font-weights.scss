@@ -1,5 +1,9 @@
 @use '../abstracts/' as *;
 
+.fw-thin {
+    font-weight: $fw-200;
+}
+
 .fw-regular {
     font-weight: $fw-400;
 }

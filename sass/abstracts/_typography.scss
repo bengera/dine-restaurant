@@ -1,8 +1,7 @@
-$ff-sans: "Times New Roman", Times, serif;
-$ff-serif: "Lucida Console", "Courier New", monospace;
-
-$ff-base: $ff-sans;
-$ff-accent: $ff-serif;
+// $ff-sans: "Times New Roman", Times, serif;
+$ff-league: "League Spartan", sans-serif;
+$ff-base: $ff-league;
+// $ff-accent: $ff-serif;
 
 $font-sizes: (
   900: clamp(2.5rem, 0.5rem + 10vw, 5rem),
@@ -12,6 +11,6 @@ $font-sizes: (
   400: 1.125rem,
   300: 1rem,
 );
-
+$fw-200: 200;
 $fw-400: 400;
 $fw-700: 700;
