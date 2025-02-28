@@ -17,6 +17,10 @@ h2 {
   letter-spacing: 0.5px;
 }
 
+// br {
+//   display: none;
+// }
+
 // HEADER
 
 .header{
@@ -24,7 +28,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -20px;
-  min-height: 100vh;
+  min-height: calc(100vh + 40px);
   
   
 
