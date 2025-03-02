@@ -64,12 +64,19 @@ h2 {
   margin-top: -120px;
   padding: 0 1rem 5rem 1rem;
 
-  &__top-section {
+  &__top-section,
+  &__bottom-section {
     margin-bottom: 101px;
   }
 
+
+
   &__content {
     
+    text-align: center;
+  }
+
+  &__text-content {
     text-align: center;
   }
 
@@ -96,8 +103,10 @@ h2 {
   }
 
   &__img {
-    margin-bottom: 78px;
-
+    
+    // margin: 0 auto;
+    margin-bottom: 88px;
+    margin: 0 auto 88px auto;
     // visibility: hidden;
   }
 }
