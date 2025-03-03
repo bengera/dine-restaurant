@@ -30,7 +30,7 @@
         <div class="about__content">
 
           <div class="about__top-section">
-            <!--Enjoyable place-->
+            <!--Enjoyable place--> 
             <picture>              
               <source 
                 srcset="
@@ -45,6 +45,7 @@
                 media="(min-width: 768px)">
                       
               <img
+              src="./images/homepage/enjoyable-place-mobile.jpg"
                 srcset="
                   ./images/homepage/enjoyable-place-mobile.jpg 1x, 
                   ./images/homepage/enjoyable-place-mobile@2x.jpg 2x" 
@@ -61,7 +62,29 @@
       </div> <!--top section end-->
 
       <div class="about__bottom-section">
-        <img src="./images/homepage/locally-sourced-mobile@2x.jpg" alt="A hand holding a spoon over a dish" class="about__img box-shadow-1">
+        <picture>
+          <source 
+          srcset="
+          ./images/homepage/locally-sourced-desktop.jpg 1x,
+          ./images/homepage/locally-sourced-desktop@2x.jpg 2x"
+          media="(min-width: 1024px)">
+
+          <source 
+          srcset="
+          ./images/homepage/locally-sourced-tablet.jpg 1x,
+          ./images/homepage/locally-sourced-tablet@2x.jpg 2x"
+          media="(min-width: 768px)">
+
+          <img 
+          src="./images/homepage/locally-sourced-mobile.jpg"
+          srcset="
+          ./images/homepage/locally-sourced-mobile.jpg 1x,
+          ./images/homepage/locally-sourced-mobile@2x.jpg 2x"
+          alt="A hand holding a spoon over a dish"
+          class="about__img box-shadow-1">
+          
+        </picture>
+        <!-- <img src="./images/homepage/locally-sourced-mobile@2x.jpg" alt="A hand holding a spoon over a dish" class="about__img box-shadow-1"> -->
         <div class="about__text-content">
         <h2 class="about__heading">The most locally <br> sourced food</h2>
         <p class="about__description">All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food.</p>
