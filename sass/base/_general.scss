@@ -23,14 +23,29 @@ h2 {
 
 // HEADER
 
-.header{
-  background-image: url('/images/homepage/hero-bg-mobile@2x.jpg');
+.header {
+  background-image: image-set(
+    ('/images/homepage/hero-bg-mobile.jpg' 1x),
+    ('/images/homepage/hero-bg-mobile@2x.jpg' 2x));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -20px;
   min-height: calc(100vh + 40px);
-  
-  
+
+  @include mq(medium) {
+    background-image: image-set(
+      ('/images/homepage/hero-bg-tablet.jpg' 1x),
+      ('/images/homepage/hero-bg-tablet@2x.jpg' 2x));
+
+  }
+
+  @include mq(large) {
+    background-image: image-set(
+      ('/images/homepage/hero-bg-desktop.jpg' 1x),
+      ('/images/homepage/hero-bg-desktop@2x.jpg' 2x));
+
+  }
+
 
   &__logo {
     margin: 0 auto;
@@ -40,9 +55,9 @@ h2 {
   &__heading {
     font-weight: $fw-400;
     line-height: 40px;
-    
-   
-    
+
+
+
   }
 
   &__description {
@@ -53,8 +68,10 @@ h2 {
     padding: 14rem 1.5rem 0 1.5rem;
     text-align: center;
   }
-  
 }
+
+  
+
 
 
 // ABOUT SECTION
