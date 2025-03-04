@@ -40,6 +40,12 @@ h2 {
     margin: 0 auto 36px auto;
   }
 
+  &__menu-item {
+    margin-bottom: 45px;
+    padding-bottom: 54px;
+    border-bottom: 1px solid hsl(0, 0%, 20%)
+  }
+
   
 }
 
