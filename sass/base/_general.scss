@@ -16,53 +16,23 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-
-.highlights {
-  background-color: $color-cod-gray;
-  
-  
-  &__content {
-    padding: 7rem 1rem 5.3rem 1rem;
-    color: $color-white;
-    text-align: center;
-  }
-  
-  &__menu-images {
-    margin-top: 85px;
-  }
-
-  &__dish-title {
-    font-size: 20px;
-    margin-bottom: 6px;
-  }
-
-  &__img {     
-    margin: 0 auto 36px auto;
-  }
-
-  &__menu-item {
-    
-    padding-bottom: 54px;
-    border-bottom: 1px solid hsl(0, 0%, 20%)
-  }
-
-  // &__menu-item:not(:last-child) {
-  //   margin-bottom: 45px;
-  // }
-
-  
+//EVENTS///////////////////////
+.events {
+  padding: 1rem;
 }
 
-.highlights__menu-item:not(:last-of-type) {
-  margin-bottom: 45px;
-}
+
+
+
+
+////////////////////////////////
 
 
 
 // ABOUT + HIGHLIGHTS SECTION GENERAL STYLING
 .about,.highlights{
   color: clr(secondary,100);
-  padding: 0 1rem 5rem 1rem;
+  padding: 0 1rem 1rem 1rem;
 
   &__text-content {
     text-align: center;
