@@ -20,18 +20,32 @@ h2 {
 .highlights {
   background-color: $color-cod-gray;
   
+  
   &__content {
     padding: 7rem 1rem 5.3rem 1rem;
+    color: $color-white;
+    text-align: center;
   }
   
   &__menu-images {
-    margin-top: 101px;
+    margin-top: 85px;
   }
 
-  &__text-content {
-    color: $color-white;
+  &__dish-title {
+    font-size: 20px;
+    margin-bottom: 6px;
   }
+
+  &__img {     
+    margin: 0 auto 36px auto;
+  }
+
+  
 }
+
+
+
+
 
 // ABOUT + HIGHLIGHTS SECTION GENERAL STYLING
 .about,.highlights{
@@ -41,6 +55,7 @@ h2 {
   &__text-content {
     text-align: center;
   }
+
 
   &__heading{
     font-size: 32px;
