@@ -41,15 +41,21 @@ h2 {
   }
 
   &__menu-item {
-    margin-bottom: 45px;
+    
     padding-bottom: 54px;
     border-bottom: 1px solid hsl(0, 0%, 20%)
   }
 
+  // &__menu-item:not(:last-child) {
+  //   margin-bottom: 45px;
+  // }
+
   
 }
 
-
+.highlights__menu-item:not(:last-of-type) {
+  margin-bottom: 45px;
+}
 
 
 
