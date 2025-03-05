@@ -18,7 +18,11 @@ h2 {
 
 //EVENTS///////////////////////
 .events {
-  padding: 1rem;
+  margin-top: 5rem;
+
+  &__description {
+    margin-bottom: 27px;
+  }
   
   &__image-content {
     margin-bottom: 27px;
