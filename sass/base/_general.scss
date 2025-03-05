@@ -16,65 +16,38 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-//EVENTS///////////////////////
-.events {
-  margin-top: 5rem;
-  margin-bottom: 6rem;
 
-  &__description {
-    margin-bottom: 27px;
+
+.reservation {
+  background-image: image-set(
+    ('/images/homepage/ready-bg-mobile.jpg' 1x),
+    ('/images/homepage/ready-bg-mobile@2x.jpg' 2x));
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+
+  @include mq(medium) {
+    background-image: image-set(
+      ('/images/homepage/ready-bg-tablet.jpg' 1x),
+      ('/images/homepage/ready-bg-tablet@2x.jpg' 2x));
+
   }
-  
-  &__image-content {
-    margin-bottom: 27px;
+
+  @include mq(large) {
+    background-image: image-set(
+      ('/images/homepage/ready-bg-desktop.jpg' 1x),
+      ('/images/homepage/ready-bg-desktop@2x.jpg' 2x));
+
   }
 
   &__content {
-    text-align: center;
-  }
-
-  &__buttons-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  &__event-type-button {
-    text-transform: uppercase;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    color: $color-shuttle-gray;
-    letter-spacing: 2.5px;
-    position: relative;
-    font-weight: 500;
-    
-    
-       
-    
-  
-    
-  }
-
-  &__event-type-button.active {
-    &::after {
-      content: "";
-    width: 50px;
-    height: 5px;
-    position: absolute;
-    border-bottom: 2px solid $color-beaver;
-    bottom: -10px;
-    padding-bottom: 0.5rem;
-    left: 170px;
-    }
+    padding: 4rem;
+    color: $color-white
   }
 }
 
 
 
-
-
-////////////////////////////////
 
 // ABOUT + HIGHLIGHTS + EVENTS SECTION GENERAL STYLING
 
@@ -92,7 +65,7 @@ h2 {
   }
 }
 
-.about,.highlights,.events{
+.about,.highlights,.events,.reservation{
   color: clr(secondary,100);
   padding: 0 1rem 1rem 1rem;
 
