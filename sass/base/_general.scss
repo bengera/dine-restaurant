@@ -19,6 +19,7 @@ h2 {
 //EVENTS///////////////////////
 .events {
   margin-top: 5rem;
+  margin-bottom: 6rem;
 
   &__description {
     margin-bottom: 27px;
@@ -55,7 +56,7 @@ h2 {
     
   }
 
-  &__event-type-button.current {
+  &__event-type-button.active {
     &::after {
       content: "";
     width: 50px;
