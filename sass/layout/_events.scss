@@ -35,6 +35,10 @@
       max-width: 200px;
       
     }
+
+    &__event-type-button.not-active{
+      opacity: 0.5;
+    }
   
     &__event-type-button.active {
       &::after {
