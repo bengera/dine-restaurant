@@ -21,6 +21,10 @@
       flex-direction: column;
       gap: 1.5rem;
     }
+
+    &__img {     
+      margin: 0 auto 56px auto;
+    }
   
     &__event-type-button {
       text-transform: uppercase;
