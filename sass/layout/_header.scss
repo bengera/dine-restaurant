@@ -22,6 +22,10 @@
         ('/images/homepage/hero-bg-desktop@2x.jpg' 2x));
   
     }
+
+    &__button {
+      margin-bottom: 10rem; // stop image overlapping on Brave browser
+    }
   
   
     &__logo {
