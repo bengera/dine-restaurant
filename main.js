@@ -4,7 +4,9 @@ const eventButtons = document.querySelectorAll('.events__event-type-button');
 const eventHeading = document.querySelector('.events__heading');
 const eventDescription = document.querySelector('.events__description');
 const eventImage = document.querySelector('.events__img'); // get img
-const eventImgSource = document.querySelector('.events__picture source'); // get source
+// const eventImgSource = document.querySelector('.events__picture source'); // get source
+const eventImgSource = document.getElementById('event-src-desktop');
+const evenImgSourceTablet = document.getElementById('event-src-tablet');
 
 const eventData = {
     "Family Gathering": {
@@ -53,14 +55,31 @@ eventButtons.forEach((button) => {
           eventDescription.innerText = eventData["Family Gathering"].description;
           eventImgSource.setAttribute("srcset", `${eventData["Family Gathering"].desktop} 1x, ${eventData["Family Gathering"].desktop2x} 2x`)
           eventImgSource.setAttribute("media", "(min-width: 1040px)");
+
+          evenImgSourceTablet.setAttribute("srcset", `${eventData["Family Gathering"].tablet} 1x, ${eventData["Family Gathering"].tablet2x} 2x`)
+          evenImgSourceTablet.setAttribute("media", "(min-width: 720px)");
+
+          eventImage.setAttribute("srcset", eventData["Family Gathering"].mobile);
+          eventImage.srcset = `${eventData["Family Gathering"].mobile} 1x ${eventData["Family Gathering"].mobile2x} 2x`;
+          
          break;
 
         case "special events":
           eventHeading.innerText = eventData["Special Events"].heading;
           eventDescription.innerText = eventData["Special Events"].description;
-          eventImgSource.setAttribute("srcset", `${eventData["Special Events"].tablet} 1x, ${eventData["Special Events"].tablet2x} 2x`); // 
-          eventImage.setAttribute("src", eventData["Special Events"].mobile);
+
+          eventImgSource.setAttribute("srcset", `${eventData["Special Events"].desktop} 1x, ${eventData["Special Events"].desktop2x} 2x`)
+          eventImgSource.setAttribute("media", "(min-width: 1040px)");
+
+          evenImgSourceTablet.setAttribute("srcset", `${eventData["Special Events"].tablet} 1x, ${eventData["Special Events"].tablet2x} 2x`)
+          evenImgSourceTablet.setAttribute("media", "(min-width: 720px)");
+
+          eventImage.setAttribute("srcset", eventData["Special Events"].mobile);
           eventImage.srcset = `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`;
+  
+          // eventImgSource.setAttribute("srcset", `${eventData["Special Events"].tablet} 1x, ${eventData["Special Events"].tablet2x} 2x`); // 
+          // eventImage.setAttribute("src", eventData["Special Events"].mobile);
+          // eventImage.srcset = `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`;
           break;
 
         case "social gathering":
