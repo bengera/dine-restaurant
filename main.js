@@ -4,9 +4,8 @@ const eventButtons = document.querySelectorAll('.events__event-type-button');
 const eventHeading = document.querySelector('.events__heading');
 const eventDescription = document.querySelector('.events__description');
 const eventImage = document.querySelector('.events__img'); // get img
-// const eventImgSource = document.querySelector('.events__picture source'); // get source
-const eventImgSource = document.getElementById('event-src-desktop');
-const evenImgSourceTablet = document.getElementById('event-src-tablet');
+const eventImgSource = document.getElementById('event-src-desktop'); // get desktop
+const evenImgSourceTablet = document.getElementById('event-src-tablet'); // get second source (tablet)
 
 const eventData = {
     "Family Gathering": {
@@ -77,14 +76,20 @@ eventButtons.forEach((button) => {
           eventImage.setAttribute("srcset", eventData["Special Events"].mobile);
           eventImage.srcset = `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`;
   
-          // eventImgSource.setAttribute("srcset", `${eventData["Special Events"].tablet} 1x, ${eventData["Special Events"].tablet2x} 2x`); // 
-          // eventImage.setAttribute("src", eventData["Special Events"].mobile);
-          // eventImage.srcset = `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`;
-          break;
+         break;
 
         case "social gathering":
           eventHeading.innerText = eventData["Social Gathering"].heading;
           eventDescription.innerText = eventData["Social Gathering"].description;    
+
+          eventImgSource.setAttribute("srcset", `${eventData["Social Gathering"].desktop} 1x, ${eventData["Social Gathering"].desktop2x} 2x`)
+          eventImgSource.setAttribute("media", "(min-width: 1040px)");
+
+          evenImgSourceTablet.setAttribute("srcset", `${eventData["Social Gathering"].tablet} 1x, ${eventData["Social Gathering"].tablet2x} 2x`)
+          evenImgSourceTablet.setAttribute("media", "(min-width: 720px)");
+
+          eventImage.setAttribute("srcset", eventData["Social Gathering"].mobile);
+          eventImage.srcset = `${eventData["Social Gathering"].mobile} 1x, ${eventData["Social Gathering"].mobile2x} 2x`;
           break;
 
         default:
