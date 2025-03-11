@@ -4,7 +4,7 @@ const eventButtons = document.querySelectorAll('.events__event-type-button');
 const eventHeading = document.querySelector('.events__heading');
 const eventDescription = document.querySelector('.events__description');
 const eventImage = document.querySelector('.events__img'); // get img
-const eventImgSource = document.querySelector('.events__image-content source'); // get source
+const eventImgSource = document.querySelector('.events__picture source'); // get source
 
 const eventData = {
     "Family Gathering": {
@@ -51,6 +51,8 @@ eventButtons.forEach((button) => {
         case "family gathering":
           eventHeading.innerText = eventData["Family Gathering"].heading;
           eventDescription.innerText = eventData["Family Gathering"].description;
+          eventImgSource.setAttribute("srcset", `${eventData["Family Gathering"].desktop} 1x, ${eventData["Family Gathering"].desktop2x} 2x`)
+          eventImgSource.setAttribute("media", "(min-width: 1040px)");
          break;
 
         case "special events":
