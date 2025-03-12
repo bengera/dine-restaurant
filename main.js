@@ -1,4 +1,5 @@
 "use strict";
+import { images } from './images';
 
 const eventButtons = document.querySelectorAll('.events__event-type-button');
 const eventHeading = document.querySelector('.events__heading');
@@ -11,34 +12,35 @@ const eventData = {
     "Family Gathering": {
         heading: "Family Gathering",
         description: "We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.",
-        desktop: "./images/homepage/family-gathering-desktop.jpg",
-        desktop2x: "./images/homepage/family-gathering-desktop@2x.jpg",
-        tablet: "./images/homepage/family-gathering-tablet.jpg",
-        tablet2x: "./images/homepage/family-gathering-tablet@2x.jpg",
-        mobile: "./images/homepage/family-gathering-mobile.jpg",
-        mobile2x: "./images/homepage/family-gathering-mobile@2x.jpg"
+        desktop: images["family-gathering-desktop"],
+        desktop2x: images["family-gathering-desktop-2x"],
+        tablet: images["family-gathering-tablet"],
+        tablet2x: images["family-gathering-tablet-2x"],
+        mobile: images["family-gathering-mobile"],
+        mobile2x: images["family-gathering-mobile-2x"]
     },
     "Special Events": {
         heading: "Special Events",
         description: "Whether it’s a romantic dinner or special date you’re celebrating with others, we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.",
-        desktop: "./images/homepage/special-events-desktop.jpg",
-        desktop2x: "./images/homepage/special-events-desktop@2x.jpg",
-        tablet: "./images/homepage/special-events-tablet.jpg",
-        tablet2x: "./images/homepage/special-events-tablet@2x.jpg",
-        mobile: "./images/homepage/special-events-mobile.jpg",
-        mobile2x: "./images/homepage/special-events-mobile@2x.jpg"
+        desktop: images["special-events-desktop"],
+        desktop2x: images["special-events-desktop-2x"],
+        tablet: images["special-events-tablet"],
+        tablet2x: images["special-events-tablet-2x"],
+        mobile: images["special-events-mobile"],
+        mobile2x: images["special-events-mobile-2x"]
     },
     "Social Gathering": {
         heading: "Social Gathering",
         description: "Enjoy a social gathering at our venue, where you can connect and have a great time with friends over delicious food and drinks.",
-        desktop: "./images/homepage/social-events-desktop.jpg",
-        desktop2x: "./images/homepage/social-events-desktop@2x.jpg",
-        tablet: "./images/homepage/social-events-tablet.jpg",
-        tablet2x: "./images/homepage/social-events-tablet@2x.jpg",
-        mobile: "./images/homepage/social-events-mobile.jpg",
-        mobile2x: "./images/homepage/social-events-mobile@2x.jpg"
+        desktop: images["social-events-desktop"],
+        desktop2x: images["social-events-desktop-2x"],
+        tablet: images["social-events-tablet"],
+        tablet2x: images["social-events-tablet-2x"],
+        mobile: images["social-events-mobile"],
+        mobile2x: images["social-events-mobile-2x"]
     }
 };
+
 
 eventButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
