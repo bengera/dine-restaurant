@@ -5,7 +5,7 @@ const eventHeading = document.querySelector('.events__heading');
 const eventDescription = document.querySelector('.events__description');
 const eventImage = document.querySelector('.events__img'); // get img
 const eventImgSource = document.getElementById('event-src-desktop'); // get desktop
-const evenImgSourceTablet = document.getElementById('event-src-tablet'); // get second source (tablet)
+const eventImgSourceTablet = document.getElementById('event-src-tablet'); // get second source (tablet)
 
 const eventData = {
     "Family Gathering": {
@@ -16,7 +16,7 @@ const eventData = {
         tablet: "./images/homepage/family-gathering-tablet.jpg",
         tablet2x: "./images/homepage/family-gathering-tablet@2x.jpg",
         mobile: "./images/homepage/family-gathering-mobile.jpg",
-        mobile2x: "/images/homepage/family-gathering-mobile@2x.jpg"
+        mobile2x: "./images/homepage/family-gathering-mobile@2x.jpg"
     },
     "Special Events": {
         heading: "Special Events",
@@ -26,7 +26,7 @@ const eventData = {
         tablet: "./images/homepage/special-events-tablet.jpg",
         tablet2x: "./images/homepage/special-events-tablet@2x.jpg",
         mobile: "./images/homepage/special-events-mobile.jpg",
-        mobile2x: "/images/homepage/special-events-mobile@2x.jpg"
+        mobile2x: "./images/homepage/special-events-mobile@2x.jpg"
     },
     "Social Gathering": {
         heading: "Social Gathering",
@@ -36,7 +36,7 @@ const eventData = {
         tablet: "./images/homepage/social-events-tablet.jpg",
         tablet2x: "./images/homepage/social-events-tablet@2x.jpg",
         mobile: "./images/homepage/social-events-mobile.jpg",
-        mobile2x: "/images/homepage/social-events-mobile@2x.jpg"
+        mobile2x: "./images/homepage/social-events-mobile@2x.jpg"
     }
 };
 
@@ -55,8 +55,8 @@ eventButtons.forEach((button) => {
           eventImgSource.setAttribute("srcset", `${eventData["Family Gathering"].desktop} 1x, ${eventData["Family Gathering"].desktop2x} 2x`)
           eventImgSource.setAttribute("media", "(min-width: 1040px)");
 
-          evenImgSourceTablet.setAttribute("srcset", `${eventData["Family Gathering"].tablet} 1x, ${eventData["Family Gathering"].tablet2x} 2x`)
-          evenImgSourceTablet.setAttribute("media", "(min-width: 720px)");
+          eventImgSourceTablet.setAttribute("srcset", `${eventData["Family Gathering"].tablet} 1x, ${eventData["Family Gathering"].tablet2x} 2x`)
+          eventImgSourceTablet.setAttribute("media", "(min-width: 720px)");
 
           // eventImage.setAttribute("srcset", eventData["Family Gathering"].mobile);
           eventImage.srcset = `${eventData["Family Gathering"].mobile} 1x, ${eventData["Family Gathering"].mobile2x} 2x`;
@@ -70,8 +70,8 @@ eventButtons.forEach((button) => {
           eventImgSource.setAttribute("srcset", `${eventData["Special Events"].desktop} 1x, ${eventData["Special Events"].desktop2x} 2x`)
           eventImgSource.setAttribute("media", "(min-width: 1040px)");
 
-          evenImgSourceTablet.setAttribute("srcset", `${eventData["Special Events"].tablet} 1x, ${eventData["Special Events"].tablet2x} 2x`)
-          evenImgSourceTablet.setAttribute("media", "(min-width: 720px)");
+          eventImgSourceTablet.setAttribute("srcset", `${eventData["Special Events"].tablet} 1x, ${eventData["Special Events"].tablet2x} 2x`)
+          eventImgSourceTablet.setAttribute("media", "(min-width: 720px)");
 
           eventImage.setAttribute("srcset", `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`)
           // eventImage.srcset = `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`;
@@ -85,8 +85,8 @@ eventButtons.forEach((button) => {
           eventImgSource.setAttribute("srcset", `${eventData["Social Gathering"].desktop} 1x, ${eventData["Social Gathering"].desktop2x} 2x`)
           eventImgSource.setAttribute("media", "(min-width: 1040px)");
 
-          evenImgSourceTablet.setAttribute("srcset", `${eventData["Social Gathering"].tablet} 1x, ${eventData["Social Gathering"].tablet2x} 2x`)
-          evenImgSourceTablet.setAttribute("media", "(min-width: 720px)");
+          eventImgSourceTablet.setAttribute("srcset", `${eventData["Social Gathering"].tablet} 1x, ${eventData["Social Gathering"].tablet2x} 2x`)
+          eventImgSourceTablet.setAttribute("media", "(min-width: 720px)");
 
           // eventImage.setAttribute("srcset", eventData["Social Gathering"].mobile);
           eventImage.srcset = `${eventData["Social Gathering"].mobile} 1x, ${eventData["Social Gathering"].mobile2x} 2x`;
