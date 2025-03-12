@@ -16,7 +16,7 @@ const eventData = {
         tablet: "./images/homepage/family-gathering-tablet.jpg",
         tablet2x: "./images/homepage/family-gathering-tablet@2x.jpg",
         mobile: "./images/homepage/family-gathering-mobile.jpg",
-        mobile2x: "./images/homepage/family-gathering-mobile@2x.jpg"
+        mobile2x: "/images/homepage/family-gathering-mobile@2x.jpg"
     },
     "Special Events": {
         heading: "Special Events",
@@ -26,7 +26,7 @@ const eventData = {
         tablet: "./images/homepage/special-events-tablet.jpg",
         tablet2x: "./images/homepage/special-events-tablet@2x.jpg",
         mobile: "./images/homepage/special-events-mobile.jpg",
-        mobile2x: "./images/homepage/special-events-mobile@2x.jpg"
+        mobile2x: "/images/homepage/special-events-mobile@2x.jpg"
     },
     "Social Gathering": {
         heading: "Social Gathering",
@@ -36,7 +36,7 @@ const eventData = {
         tablet: "./images/homepage/social-events-tablet.jpg",
         tablet2x: "./images/homepage/social-events-tablet@2x.jpg",
         mobile: "./images/homepage/social-events-mobile.jpg",
-        mobile2x: "./images/homepage/social-events-mobile@2x.jpg"
+        mobile2x: "/images/homepage/social-events-mobile@2x.jpg"
     }
 };
 
