@@ -73,8 +73,8 @@ eventButtons.forEach((button) => {
           evenImgSourceTablet.setAttribute("srcset", `${eventData["Special Events"].tablet} 1x, ${eventData["Special Events"].tablet2x} 2x`)
           evenImgSourceTablet.setAttribute("media", "(min-width: 720px)");
 
-          eventImage.srcset = `${eventData["Family Gathering"].mobile}?v=1 1x, ${eventData["Family Gathering"].mobile2x}?v=1 2x`;
-          eventImage.sizes = "(max-width: 719px) 100vw";
+          eventImage.setAttribute("srcset", `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`)
+          // eventImage.srcset = `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`;
   
          break;
 
