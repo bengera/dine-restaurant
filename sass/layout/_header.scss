@@ -40,11 +40,13 @@
   
     &__heading {
       font-weight: $fw-400;
-      line-height: 40px;
+      
+
 
       @include mq(medium) {
         font-size: fs(800);
         line-height: 64px;
+      
       }
   
   

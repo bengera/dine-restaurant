@@ -10,10 +10,12 @@ body {
 }
 
 h2 {
-  line-height: 48px;
-  font-size: 48px;
+  
   font-weight: $fw-700;
   letter-spacing: 0.5px;
+
+ 
+
 }
 
 
@@ -21,6 +23,50 @@ h2 {
 
 
 // ABOUT + HIGHLIGHTS + EVENTS SECTION GENERAL STYLING
+
+
+.about,
+.highlights,
+.events,
+.reservation,
+.footer
+
+{
+
+  &__heading {
+    line-height: 40px;
+    font-size: size(32);
+  
+    @include mq(medium) {
+      font-size: size(48);
+      line-height: 48px;
+    }
+  }
+ 
+
+ 
+
+}
+
+.about,
+.highlights,
+.events
+
+{
+ 
+  &__description {
+   
+    @include mq(medium) {
+      max-width: 457px;
+      margin: 0 auto;
+    }
+
+  }
+}
+
+
+
+
 
 .about,.highlights {
   &__heading::before{
@@ -46,8 +92,8 @@ h2 {
 
 
   &__heading{
-    font-size: 32px;
-    line-height: 40px;
+    
+    
     position: relative;
     margin-bottom: 13px;
     
