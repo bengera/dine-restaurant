@@ -13,6 +13,7 @@
       background-image: image-set(
         ('/images/homepage/hero-bg-tablet.jpg' 1x),
         ('/images/homepage/hero-bg-tablet@2x.jpg' 2x));
+        min-height: 100vh;
   
     }
   
@@ -25,6 +26,10 @@
 
     &__button {
       margin-bottom: 15rem; // stop image overlapping on Brave browser
+      @include mq(medium) {
+        margin-top: 52px;
+      }
+  
     }
   
   
@@ -43,11 +48,20 @@
   
     &__description {
       margin-bottom: 56px;
+      @include mq(medium) {
+        max-width: 573px;
+        margin: 0 auto;
+      }
+  
     }
   
     &__content {
       padding: 14rem 1.5rem 0 1.5rem;
       text-align: center;
+
+      @include mq(medium) {
+        padding: 25rem 1.5rem 0 1.5rem;
+      }
     }
   }
   
