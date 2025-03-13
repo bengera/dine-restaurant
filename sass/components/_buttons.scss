@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .button {
-  display: inline-flex;
+  display: inline-block;
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
@@ -10,10 +10,12 @@
   letter-spacing: 2.5px;
   font-weight: $fw-400;
   transition: 275ms ease;
-  padding: 1.4em 2.5em;
+  height: 64px;
+  width: 245px;
+  
+  // padding: 1.4em 2.5em;
 
   
-
   &[data-type="dark"] {
     background-color: transparent;
     color: $color-white;
