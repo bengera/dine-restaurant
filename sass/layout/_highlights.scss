@@ -20,7 +20,7 @@
     }
   
     &__img {     
-      margin: 0 auto 56px auto;
+      margin: 0 auto 36px auto;
     }
   
     &__menu-item {
@@ -30,7 +30,7 @@
     }
   
     &__menu-item:not(:last-of-type) {
-      margin-bottom: 45px;
+      margin-bottom: 20px;
       border-bottom: 1px solid hsl(0, 0%, 20%)
     }
   
