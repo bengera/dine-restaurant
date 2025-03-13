@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.footer {
+    background-color: $color-cod-gray;
+    padding: 5rem 1rem;
+    letter-spacing: 2px;
+  
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      &__logo {
+        width: 103px;
+        margin: 0 auto 22px auto;
+      }
+
+      &__contact-info {
+        
+      }
+
+     
+  }
+  
