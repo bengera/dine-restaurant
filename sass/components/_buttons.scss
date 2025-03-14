@@ -12,20 +12,18 @@
   transition: 275ms ease;
   height: 64px;
   width: 245px;
-  
+
   // padding: 1.4em 2.5em;
 
-  
   &[data-type="dark"] {
     background-color: transparent;
     color: $color-white;
     border: 1px solid white;
 
-     &:is(:hover, :focus) {
-    background: $color-white;
-    color: #000;
-    
-  }
+    &:is(:hover, :focus) {
+      background: $color-white;
+      color: #000;
+    }
   }
 
   &[data-type="light"] {
@@ -36,7 +34,6 @@
     &:is(:hover, :focus) {
       background: white;
       color: #000;
-      
     }
   }
 
@@ -47,14 +44,10 @@
   //   outline-offset: calc(var(--outline-size) * -1);
   //   color: $color-white;
   // }
-
- 
 }
 
-.btn-inactive.light{
-
+.btn-inactive.light {
 }
 
-.btn-inactive.dark{
-  
+.btn-inactive.dark {
 }

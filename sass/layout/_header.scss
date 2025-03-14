@@ -1,76 +1,65 @@
 @use "../abstracts/" as *;
 
 .header {
+  background-image: image-set(
+    ("/images/homepage/hero-bg-mobile.jpg" 1x),
+    ("/images/homepage/hero-bg-mobile@2x.jpg" 2x)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -20px;
+  min-height: calc(100vh + 40px);
+
+  @include mq(medium) {
     background-image: image-set(
-      ('/images/homepage/hero-bg-mobile.jpg' 1x),
-      ('/images/homepage/hero-bg-mobile@2x.jpg' 2x));
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -20px;
-    min-height: calc(100vh + 40px);
-  
+      ("/images/homepage/hero-bg-tablet.jpg" 1x),
+      ("/images/homepage/hero-bg-tablet@2x.jpg" 2x)
+    );
+    min-height: 100vh;
+  }
+
+  @include mq(large) {
+    background-image: image-set(
+      ("/images/homepage/hero-bg-desktop.jpg" 1x),
+      ("/images/homepage/hero-bg-desktop@2x.jpg" 2x)
+    );
+  }
+
+  &__button {
+    margin-bottom: 15rem; // stop image overlapping on Brave browser
     @include mq(medium) {
-      background-image: image-set(
-        ('/images/homepage/hero-bg-tablet.jpg' 1x),
-        ('/images/homepage/hero-bg-tablet@2x.jpg' 2x));
-        min-height: 100vh;
-  
-    }
-  
-    @include mq(large) {
-      background-image: image-set(
-        ('/images/homepage/hero-bg-desktop.jpg' 1x),
-        ('/images/homepage/hero-bg-desktop@2x.jpg' 2x));
-  
-    }
-
-    &__button {
-      margin-bottom: 15rem; // stop image overlapping on Brave browser
-      @include mq(medium) {
-        margin-top: 52px;
-      }
-  
-    }
-  
-  
-    &__logo {
-      margin: 0 auto;
-    }
-  
-  
-    &__heading {
-      font-weight: $fw-400;
-      
-
-
-      @include mq(medium) {
-        font-size: fs(800);
-        line-height: 64px;
-      
-      }
-  
-  
-  
-  
-    }
-  
-    &__description {
-      margin-bottom: 56px;
-      @include mq(medium) {
-        max-width: 573px;
-        margin: 0 auto;
-        font-size: size(20);
-      }
-  
-    }
-  
-    &__content {
-      padding: 14rem 1.5rem 0 1.5rem;
-      text-align: center;
-
-      @include mq(medium) {
-        padding: 25rem 1.5rem 0 1.5rem;
-      }
+      margin-top: 52px;
     }
   }
-  
+
+  &__logo {
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-weight: $fw-400;
+
+    @include mq(medium) {
+      font-size: fs(800);
+      line-height: 64px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 56px;
+    @include mq(medium) {
+      max-width: 573px;
+      margin: 0 auto;
+      font-size: size(20);
+    }
+  }
+
+  &__content {
+    padding: 14rem 1.5rem 0 1.5rem;
+    text-align: center;
+
+    @include mq(medium) {
+      padding: 25rem 1.5rem 0 1.5rem;
+    }
+  }
+}

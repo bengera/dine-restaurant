@@ -1,63 +1,60 @@
 @use "../abstracts/" as *;
 
 .events {
-    margin-top: 5rem;
-    margin-bottom: 6rem;
-  
-    &__description {
-      margin-bottom: 27px;
-    }
-    
-    &__image-content {
-      margin-bottom: 37px;
-    }
-  
-    &__content {
-      text-align: center;
-    }
-  
-    &__buttons-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
+  margin-top: 5rem;
+  margin-bottom: 6rem;
 
-    &__img {     
-      margin: 0 auto 56px auto;
-    }
-  
-    &__event-type-button {
-      text-transform: uppercase;
-      border: 0;
-      background-color: transparent;
-      cursor: pointer;
-      color: hsla(216, 14%, 42%, 0.52);
-      letter-spacing: 2.5px;
-      position: relative;
-      font-weight: 500;       
-      margin: 0 auto;
-      max-width: 200px;
-      
-    }
-    
-   
-    &__event-type-button {
-      &::after {
-        border-bottom: 0;
-      }
-    }
+  &__description {
+    margin-bottom: 27px;
+  }
 
-    &__event-type-button.active:nth-last-of-type(2) {
-      &::after {
-        left: 55px;
-      }
-    }
+  &__image-content {
+    margin-bottom: 37px;
+  }
 
-      
-    &__event-type-button.active {
-      color: $color-shuttle-gray;
-      font-weight: 600;
-      &::after {
+  &__content {
+    text-align: center;
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__img {
+    margin: 0 auto 56px auto;
+  }
+
+  &__event-type-button {
+    text-transform: uppercase;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: hsla(216, 14%, 42%, 0.52);
+    letter-spacing: 2.5px;
+    position: relative;
+    font-weight: 500;
+    margin: 0 auto;
+    max-width: 200px;
+  }
+
+  &__event-type-button {
+    &::after {
+      border-bottom: 0;
+    }
+  }
+
+  &__event-type-button.active:nth-last-of-type(2) {
+    &::after {
+      left: 55px;
+    }
+  }
+
+  &__event-type-button.active {
+    color: $color-shuttle-gray;
+    font-weight: 600;
+    &::after {
       content: "";
       width: 50px;
       height: 5px;
@@ -66,8 +63,6 @@
       bottom: -10px;
       padding-bottom: 0.5rem;
       left: 69px;
-     
-      }
     }
   }
-  
+}
