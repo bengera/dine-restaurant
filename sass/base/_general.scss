@@ -38,6 +38,7 @@ h2 {
     @include mq(medium) {
       max-width: 457px;
       margin: 0 auto;
+      font-size: size(20);
     }
   }
 }
@@ -57,12 +58,18 @@ h2 {
   }
 }
 
+.highlights,
+.events,
+.reservation {
+  padding: 0 1rem 1rem 1rem;
+}
+
 .about,
 .highlights,
 .events,
 .reservation {
   color: clr(secondary, 100);
-  padding: 0 1rem 1rem 1rem;
+  // padding: 0 1rem 1rem 1rem; // removed for about to allow pattern to extend without padding block
 
   &__text-content {
     text-align: center;
@@ -74,6 +81,6 @@ h2 {
   }
 }
 
-// br {
+// br { // remove diveders
 //   display: none;
 // }

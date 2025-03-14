@@ -8,6 +8,53 @@
     margin-bottom: 101px;
   }
 
+  &__picture-container {
+    position: relative;
+    @include mq(medium) {
+      &::before {
+        content: "";
+        background: url(/images/patterns/pattern-curve-top-left.svg) no-repeat;
+        background-size: cover;
+        // border: 1px solid red;
+        position: absolute;
+        width: 120vw;
+        height: 320px;
+        top: 177px;
+        left: -573.3px;
+        z-index: -1;
+      }
+    }
+  }
+  // &__about__picture-container {
+  //   position: relative;
+
+  //   &::before {
+  //     @include mq(medium) {
+  //       content: "";
+  //       background: url(/images/patterns/pattern-curve-top-left.svg);
+  //       background-repeat: no-repeat;
+  //       position: absolute;
+  //     }
+  //   }
+  // }
+
+  // &__picture {
+  //   @include mq(medium) {
+  //     position: relative;
+  //     &::before {
+  //       content: "";
+  //       background: url(/images/patterns/pattern-curve-top-left.svg);
+  //       background-repeat: no-repeat;
+  //       position: absolute;
+  //       top: 186.8px;
+  //       left: -401.9px;
+  //       // border: 1px solid red;
+  //       height: 320px;
+  //       width: 895px;
+  //     }
+  //   }
+  // }
+
   &__content {
     text-align: center;
   }
