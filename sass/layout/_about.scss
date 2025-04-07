@@ -3,9 +3,54 @@
 .about {
   margin-top: -120px;
 
+  &__bottom-section {
+    @include mq(medium) {
+      position: relative;
+      &::after {
+        content: "";
+        background: url(/images/patterns/pattern-curve-top-left.svg) no-repeat;
+        background-size: cover;
+        position: absolute;
+        height: 320px;
+        width: 120vw;
+        bottom: -140.9px;
+        right: -591.3px;
+      }
+    }
+  }
+
   &__top-section,
   &__bottom-section {
     margin-bottom: 101px;
+    // @include mq(medium) {
+    //   position: relative;
+    //   &::after {
+    //     content: "";
+    //     background: url(/images/patterns/pattern-lines.svg) no-repeat;
+    //     background-size: cover;
+    //     position: absolute;
+    //     z-index: 1000;
+    //     width: 160px;
+    //     height: 76px;
+    //   }
+    // }
+  }
+  //  Add another div to the img element to wrap it then place the element relative to the wrapper div of the img
+  &__bottom-picture {
+    position: relative;
+    @include mq(medium) {
+      &::after {
+        content: "";
+        background: url(/images/patterns/pattern-lines.svg) no-repeat;
+        background-size: cover;
+        position: absolute;
+        z-index: 1000;
+        width: 160px;
+        height: 76px;
+        right: 47px;
+        top: 165.6px;
+      }
+    }
   }
 
   &__picture-container {
