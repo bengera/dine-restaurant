@@ -41,6 +41,20 @@
     }
   }
 
+  &__sub-description {
+    font-size: 16px;
+
+    @include mq(medium) {
+      font-size: 20px;
+      max-width: 457px;
+      margin: 0 auto;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+  }
+
   &__menu-images {
     margin-top: 85px;
   }
