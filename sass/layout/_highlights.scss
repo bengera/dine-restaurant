@@ -2,11 +2,42 @@
 
 .highlights {
   background-color: $color-cod-gray;
+  position: relative;
+  z-index: 1000;
+
+  &__heading {
+    @include mq(medium) {
+      max-width: 513.6px;
+      margin: 0 auto;
+      @include mq(medium) {
+        margin-bottom: 27px;
+      }
+    }
+  }
 
   &__content {
     padding: 8rem 1rem 3rem 1rem;
     color: $color-white;
     text-align: center;
+    position: relative;
+  }
+
+  &__content-text {
+    @include mq(medium) {
+      // padding: 0 1rem 3rem 1rem;
+      text-align: left;
+      &::before {
+        content: "";
+        background: url(/images/patterns/pattern-divide.svg);
+        position: absolute;
+        width: 71px;
+        height: 7px;
+        top: -50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__menu-images {
@@ -24,6 +55,15 @@
 
   &__menu-item {
     padding-bottom: 54px;
+
+    @include mq(medium) {
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+      text-align: left;
+      gap: 30px;
+      padding: 0;
+    }
   }
 
   &__menu-item:not(:last-of-type) {
