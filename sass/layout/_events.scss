@@ -1,8 +1,22 @@
 @use "../abstracts/" as *;
 
 .events {
-  margin-top: 5rem;
+  padding-top: 5rem;
   margin-bottom: 6rem;
+
+  @include mq(medium) {
+    position: relative;
+    &::after {
+      content: "";
+      background: url(/images/patterns/pattern-curve-top-right.svg) no-repeat;
+      background-size: cover;
+      position: absolute;
+      height: 320px;
+      width: 120vw;
+      top: 0;
+      left: -586.4px;
+    }
+  }
 
   &__description {
     margin-bottom: 27px;
@@ -20,10 +34,33 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
+    @include mq(medium) {
+      flex-direction: row;
+      max-width: 635.1px;
+      margin: 0 auto 50px auto;
+    }
   }
 
   &__img {
     margin: 0 auto 56px auto;
+  }
+
+  &__picture {
+    @include mq(medium) {
+      position: relative;
+      &::after {
+        content: "";
+        background: url(/images/patterns/pattern-lines.svg) no-repeat;
+        background-size: cover;
+        position: absolute;
+        z-index: 1000;
+        width: 160px;
+        height: 76px;
+        left: 44.9px;
+        top: -35.8px;
+      }
+    }
   }
 
   &__event-type-button {
