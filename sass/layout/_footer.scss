@@ -5,11 +5,25 @@
   padding: 5rem 1rem;
   letter-spacing: 2px;
 
+  &__right-content {
+    @include mq(medium) {
+      text-align: left;
+    }
+  }
+
   &__content {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @include mq(medium) {
+      flex-direction: row;
+      align-self: center;
+      justify-items: center;
+      padding-left: 2rem;
+      gap: 5rem;
+    }
   }
 
   &__logo {
@@ -19,5 +33,9 @@
 
   &__contact-info {
     line-height: 35px;
+
+    @include mq(medium) {
+      margin-bottom: 2rem;
+    }
   }
 }
