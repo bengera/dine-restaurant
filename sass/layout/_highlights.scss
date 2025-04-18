@@ -57,6 +57,9 @@
 
   &__menu-images {
     margin-top: 85px;
+    @include mq(medium) {
+      margin-top: 66.8px;
+    }
   }
 
   &__dish-title {
