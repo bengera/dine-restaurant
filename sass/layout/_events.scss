@@ -12,9 +12,12 @@
       background-size: cover;
       position: absolute;
       height: 320px;
-      width: 120vw;
       top: 0;
-      left: -586.4px;
+      width: 100vw;
+      left: 0;
+      transform: translateX(-50%);
+      // width: 120vw;
+      // left: -586.4px;
     }
   }
 

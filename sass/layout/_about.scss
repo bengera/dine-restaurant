@@ -2,40 +2,20 @@
 
 .about {
   margin-top: -120px;
+  padding: 0.5rem;
+  overflow: hidden;
 
   &__bottom-section {
-    @include mq(medium) {
-      position: relative;
-      &::after {
-        content: "";
-        background: url(/images/patterns/pattern-curve-top-left.svg) no-repeat;
-        background-size: cover;
-        position: absolute;
-        height: 320px;
-        width: 120vw;
-        bottom: -140.9px;
-        right: -591.3px;
-      }
-    }
+    position: relative;
   }
 
   &__top-section,
   &__bottom-section {
-    margin-bottom: 101px;
-    // @include mq(medium) {
-    //   position: relative;
-    //   &::after {
-    //     content: "";
-    //     background: url(/images/patterns/pattern-lines.svg) no-repeat;
-    //     background-size: cover;
-    //     position: absolute;
-    //     z-index: 1000;
-    //     width: 160px;
-    //     height: 76px;
-    //   }
-    // }
+    // margin-bottom: 101px;
   }
+
   //  Add another div to the img element to wrap it then place the element relative to the wrapper div of the img
+
   &__bottom-picture {
     position: relative;
     @include mq(medium) {
@@ -71,38 +51,13 @@
       }
     }
   }
-  // &__about__picture-container {
-  //   position: relative;
-
-  //   &::before {
-  //     @include mq(medium) {
-  //       content: "";
-  //       background: url(/images/patterns/pattern-curve-top-left.svg);
-  //       background-repeat: no-repeat;
-  //       position: absolute;
-  //     }
-  //   }
-  // }
-
-  // &__picture {
-  //   @include mq(medium) {
-  //     position: relative;
-  //     &::before {
-  //       content: "";
-  //       background: url(/images/patterns/pattern-curve-top-left.svg);
-  //       background-repeat: no-repeat;
-  //       position: absolute;
-  //       top: 186.8px;
-  //       left: -401.9px;
-  //       // border: 1px solid red;
-  //       height: 320px;
-  //       width: 895px;
-  //     }
-  //   }
-  // }
 
   &__content {
     text-align: center;
+  }
+
+  &__text-content {
+    margin-bottom: 101px;
   }
 
   &__heading {
@@ -125,4 +80,19 @@
   &__img {
     margin: 0 auto 88px auto;
   }
+}
+
+.shape-about {
+  display: none;
+  position: absolute;
+  background-color: #f2f3f4;
+  border-radius: 50px;
+  z-index: -1;
+  bottom: -130px;
+  left: 388px;
+  height: 320px;
+  width: 120vw;
+  @include mq(medium) {
+  }
+  display: block;
 }
