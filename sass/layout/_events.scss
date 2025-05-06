@@ -106,3 +106,18 @@
     }
   }
 }
+
+.shape-event {
+  display: none;
+  position: absolute;
+  background-color: #f2f3f4;
+  border-radius: 50px;
+  z-index: -1;
+  bottom: -140px;
+  left: 388px;
+  height: 320px;
+  width: 120vw;
+  @include mq(medium) {
+  }
+  display: block;
+}
