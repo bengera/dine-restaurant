@@ -21,7 +21,7 @@
       width: 100vw;
       left: 0;
       transform: translateX(-50%);
-
+      z-index: -1;
       // width: 120vw;
       // left: -586.4px;
     }
@@ -129,5 +129,5 @@
   width: 120vw;
   @include mq(medium) {
   }
-  display: block;
+  display: none;
 }

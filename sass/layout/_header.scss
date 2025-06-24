@@ -23,6 +23,8 @@
       ("/images/homepage/hero-bg-desktop.jpg" 1x),
       ("/images/homepage/hero-bg-desktop@2x.jpg" 2x)
     );
+    background-position: right;
+    background-size: cover;
   }
 
   &__button {
@@ -34,6 +36,11 @@
 
   &__logo {
     margin: 0 auto;
+
+    @include mq(large) {
+      margin: 0;
+      margin-bottom: 153px;
+    }
   }
 
   &__heading {
@@ -43,6 +50,12 @@
       font-size: fs(800);
       line-height: 64px;
     }
+
+    @include mq(large) {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 1rem;
+    }
   }
 
   &__description {
@@ -50,6 +63,11 @@
     @include mq(medium) {
       max-width: 573px;
       margin: 0 auto;
+    }
+
+    @include mq(large) {
+      margin: 0;
+      max-width: 428px;
     }
   }
 
@@ -59,6 +77,14 @@
 
     @include mq(medium) {
       padding: 25rem 1.5rem 0 1.5rem;
+    }
+
+    @include mq(large) {
+      text-align: left;
+      padding: 15rem 1.5rem 0 7rem;
+      max-width: 1450px;
+      margin: 0 auto;
+      padding: 8rem 1.5rem 0 7rem;
     }
   }
 }
