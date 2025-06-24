@@ -9,6 +9,15 @@
     position: relative;
   }
 
+  &__top-section {
+    @include mq(large) {
+      display: flex;
+      justify-content: center;
+      padding-left: 6.4rem;
+      margin-right: 23rem;
+    }
+  }
+
   &__top-section,
   &__bottom-section {
     // margin-bottom: 101px;
@@ -48,6 +57,11 @@
         top: 177px;
         left: -573.3px;
         z-index: -1;
+
+        @include mq(large) {
+          width: 88vw;
+          width: 234%;
+        }
       }
     }
   }
@@ -58,6 +72,9 @@
 
   &__text-content {
     margin-bottom: 101px;
+    @include mq(large) {
+      align-self: center;
+    }
   }
 
   &__heading {
