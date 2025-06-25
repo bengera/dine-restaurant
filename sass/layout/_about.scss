@@ -146,6 +146,11 @@
   @include mq(medium) {
     display: block;
   }
+
+  @include mq(large) {
+    bottom: 125px;
+    left: 308px;
+  }
 }
 
 .about__top-section .about__text-content {
