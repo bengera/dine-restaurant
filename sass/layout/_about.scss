@@ -27,11 +27,12 @@
   &__bottom-section {
     @include mq(large) {
       display: grid;
-      grid-template-columns: 1fr 2.5fr;
+      grid-template-columns: 1fr 2fr;
+      gap: 12rem;
       max-width: 1400px;
-      // border: 2px solid red;
-      margin: 0 auto;
 
+      margin: 0 auto;
+      margin-top: 5rem;
       padding-left: 1rem;
     }
   }
@@ -53,13 +54,15 @@
         top: 165.6px;
 
         @include mq(large) {
-          right: 115px;
+          right: 177px;
         }
       }
     }
 
     @include mq(large) {
       grid-column: 2/2;
+      position: relative;
+      z-index: 999;
     }
   }
 
@@ -124,6 +127,9 @@
 
   &__img {
     margin: 0 auto 88px auto;
+    @include mq(large) {
+      margin: 0;
+    }
   }
 }
 

@@ -5,13 +5,40 @@
   position: relative;
   z-index: 1000;
 
+  @include mq(large) {
+    z-index: 0;
+    margin-top: -10rem;
+  }
+
   &__heading {
     @include mq(medium) {
       max-width: 513.6px;
       margin: 0 auto;
-      @include mq(medium) {
-        margin-bottom: 27px;
-      }
+      margin-bottom: 27px;
+    }
+
+    @include mq(large) {
+      margin: 0;
+    }
+  }
+
+  &__heading::before {
+    @include mq(large) {
+      margin: 0;
+    }
+  }
+
+  &__text-content {
+    @include mq(large) {
+      display: grid;
+      grid-template-columns: 1.5fr 2fr;
+    }
+  }
+
+  &__left-content {
+    @include mq(large) {
+      align-self: center;
+      text-align: left;
     }
   }
 
@@ -20,6 +47,11 @@
     color: $color-white;
     text-align: center;
     position: relative;
+
+    @include mq(large) {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
   }
 
   &__content-text {
@@ -48,6 +80,10 @@
       font-size: 20px;
       max-width: 457px;
       margin: 0 auto;
+    }
+
+    @include mq(large) {
+      max-width: inherit;
     }
   }
 
@@ -86,6 +122,10 @@
       gap: 43px;
       padding: 33.8px;
       position: relative;
+    }
+
+    @include mq(large) {
+      justify-content: start;
     }
   }
 
