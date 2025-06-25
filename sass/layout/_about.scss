@@ -5,6 +5,12 @@
   padding: 0.5rem;
   overflow: hidden;
 
+  &__description {
+    @include mq(large) {
+      margin: 0;
+    }
+  }
+
   &__bottom-section {
     position: relative;
   }
@@ -21,10 +27,12 @@
   &__bottom-section {
     @include mq(large) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 2.5fr;
       max-width: 1400px;
       // border: 2px solid red;
       margin: 0 auto;
+
+      padding-left: 1rem;
     }
   }
 
@@ -43,6 +51,10 @@
         height: 76px;
         right: 47px;
         top: 165.6px;
+
+        @include mq(large) {
+          right: 115px;
+        }
       }
     }
 
@@ -86,6 +98,7 @@
     margin-bottom: 101px;
     @include mq(large) {
       align-self: center;
+      text-align: left;
     }
   }
 
