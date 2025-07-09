@@ -60,7 +60,6 @@ eventButtons.forEach((button) => {
           eventImgSourceTablet.setAttribute("srcset", `${eventData["Family Gathering"].tablet} 1x, ${eventData["Family Gathering"].tablet2x} 2x`)
           eventImgSourceTablet.setAttribute("media", "(min-width: 720px)");
 
-          // eventImage.setAttribute("srcset", eventData["Family Gathering"].mobile);
           eventImage.src = '';
           eventImage.srcset = `${eventData["Family Gathering"].mobile} 1x, ${eventData["Family Gathering"].mobile2x} 2x`;
           eventImage.src = eventData["Family Gathering"].mobile;
@@ -78,7 +77,6 @@ eventButtons.forEach((button) => {
           eventImgSourceTablet.setAttribute("media", "(min-width: 720px)");
 
           eventImage.setAttribute("srcset", `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`)
-          // eventImage.srcset = `${eventData["Special Events"].mobile} 1x, ${eventData["Special Events"].mobile2x} 2x`;
   
          break;
 
@@ -92,7 +90,6 @@ eventButtons.forEach((button) => {
           eventImgSourceTablet.setAttribute("srcset", `${eventData["Social Gathering"].tablet} 1x, ${eventData["Social Gathering"].tablet2x} 2x`)
           eventImgSourceTablet.setAttribute("media", "(min-width: 720px)");
 
-          // eventImage.setAttribute("srcset", eventData["Social Gathering"].mobile);
           eventImage.srcset = `${eventData["Social Gathering"].mobile} 1x, ${eventData["Social Gathering"].mobile2x} 2x`;
           break;
 
