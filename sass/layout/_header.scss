@@ -1,5 +1,28 @@
 @use "../abstracts/" as *;
 
+// RESERVATION PAGE //
+.header.res {
+  background-image: image-set(
+    ("/images/booking/hero-bg-mobile.jpg" 1x),
+    ("/images/booking/hero-bg-mobile@2x.jpg" 2x)
+  );
+
+  @include mq(medium) {
+    background-image: image-set(
+      ("/images/booking/hero-bg-tablet.jpg" 1x),
+      ("/images/booking/hero-bg-tablet@2x.jpg" 2x)
+    );
+  }
+
+  @include mq(large) {
+    background-image: image-set(
+      ("/images/booking/hero-bg-desktop.jpg" 1x),
+      ("/images/booking/hero-bg-desktop@2x.jpg" 2x)
+    );
+  }
+}
+
+/// HOMEPAGE ////
 .header {
   background-image: image-set(
     ("/images/homepage/hero-bg-mobile.jpg" 1x),
