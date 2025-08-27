@@ -45,7 +45,7 @@
         <input type="email" placeholder="Email Address" id="email" />
       </div>
 
-      <fieldset>
+      <fieldset id="dates">
         <legend>Pick a date</legend>
 
         <label for="day">Day</label>
@@ -87,6 +87,40 @@
           oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,4)"
           required
         />
+      </fieldset>
+      <fieldset id="times">
+        <legend>Pick a time</legend>
+        <label for="hour">Hour</label>
+        <input
+          type="text"
+          placeholder="09"
+          id="hour"
+          name="hour"
+          maxlength="2"
+          inputmode="numeric"
+          pattern="(0[1-9]|1[0-2])"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
+          required
+        />
+
+        <label for="minute">Minute</label>
+        <input
+          type="text"
+          placeholder="00"
+          id="minute"
+          name="minute"
+          maxlength="2"
+          inputmode="numeric"
+          pattern="(0[1-9]|1[0-2])"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
+          required
+        />
+
+        <label for="ampm">Time Period</label>
+        <select name="ampm" id="ampm">
+          <option value="am">AM</option>
+          <option value="pm">PM</option>
+        </select>
       </fieldset>
     </form>
     <footer-component></footer-component>
