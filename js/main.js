@@ -1,5 +1,6 @@
 "use strict";
 import { images } from './images';
+import '../sass/main.scss'
 
 const eventButtons = document.querySelectorAll('.events__event-type-button');
 const eventHeading = document.querySelector('.events__heading');

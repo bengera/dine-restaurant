@@ -184,7 +184,6 @@
   left: 388px;
   height: 320px;
   width: 120vw;
-  @include mq(medium) {
-  }
-  display: none;
+  // @include mq(medium) {
+  // }
 }

@@ -1,24 +1,24 @@
-import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
-  base: '/',
+  base: "/",
   css: {
-    preprocessorOptions:{
+    preprocessorOptions: {
       scss: {
-      api: 'modern-compiler'
-      }
-    }
+        api: "modern-compiler",
+      },
+    },
   },
-  
+
   build: {
     assetsInlineLimit: 0, // Disable inline asset embedding for all asset types
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'index.html'),
-        mainJS: resolve(__dirname, 'main.js')
-        
-      }
-    }
-  }
+        index: resolve(__dirname, "index.html"),
+        reservations: resolve(__dirname, "reservations.html"),
+        mainJS: resolve(__dirname, "main.js"),
+      },
+    },
+  },
 });
