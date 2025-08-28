@@ -32,105 +32,108 @@
         </button>
       </div>
     </header>
-    <main></main>
-    <form class="form" id="form">
-      <div class="form-control">
-        <label for="name" class="sr-only">Name</label>
-        <input type="text" placeholder="Name" id="name" />
-      </div>
-
-      <!--EMAIL-->
-      <div class="form-control">
-        <label for="email" class="sr-only">Email Address</label>
-        <input type="email" placeholder="Email" id="email" />
-      </div>
-
-      <fieldset id="dates">
-        <legend>Pick a date</legend>
-
-        <div class="date-fields-container">
-          <label for="day" class="sr-only">Day</label>
-          <!--0-9 digits only, consisting of 1 or 2 digits-->
-          <input
-            class="input-small"
-            type="text"
-            placeholder="DD"
-            id="day"
-            name="day"
-            maxlength="2"
-            inputmode="numeric"
-            pattern="(0[1-9]|[12][0-9]|3[01])"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
-            required
-          />
-
-          <label for="month" class="sr-only">Month</label>
-          <input
-            class="input-small"
-            type="text"
-            placeholder="MM"
-            id="month"
-            name="month"
-            maxlength="2"
-            inputmode="numeric"
-            pattern="(0[1-9]|1[0-2])"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
-            required
-          />
-
-          <label for="year" class="sr-only">Year</label>
-          <input
-            class="input-small"
-            type="text"
-            placeholder="YYYY"
-            id="year"
-            name="year"
-            maxlength="4"
-            inputmode="numeric"
-            pattern="(19[0-9]{2}|20[0-9]{2})"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,4)"
-            required
-          />
+    <main>
+      <form class="form" id="form">
+        <div class="form-control">
+          <label for="name" class="sr-only">Name</label>
+          <input type="text" placeholder="Name" id="name" />
         </div>
-        <!--date-field-container end-->
-      </fieldset>
-      <fieldset id="times">
-        <legend>Pick a time</legend>
-        <label for="hour" class="sr-only">Hour</label>
-        <input
-          class="input-small"
-          type="text"
-          placeholder="09"
-          id="hour"
-          name="hour"
-          maxlength="2"
-          inputmode="numeric"
-          pattern="(0[1-9]|1[0-2])"
-          oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
-          required
-        />
 
-        <label for="minute" class="sr-only">Minute</label>
-        <input
-          class="input-small"
-          type="text"
-          placeholder="00"
-          id="minute"
-          name="minute"
-          maxlength="2"
-          inputmode="numeric"
-          pattern="(0[1-9]|1[0-2])"
-          oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
-          required
-        />
+        <!--EMAIL-->
+        <div class="form-control">
+          <label for="email" class="sr-only">Email Address</label>
+          <input type="email" placeholder="Email" id="email" />
+        </div>
 
-        <label for="ampm" class="sr-only">Time Period</label>
-        <select name="ampm" id="ampm">
-          <option value="am">AM</option>
-          <option value="pm">PM</option>
-        </select>
-      </fieldset>
-    </form>
+        <fieldset id="dates">
+          <div class="fields-container">
+            <p>Pick a date</p>
+            <label for="day" class="sr-only">Day</label>
+            <!--0-9 digits only, consisting of 1 or 2 digits-->
+            <input
+              class="input-small"
+              type="text"
+              placeholder="DD"
+              id="day"
+              name="day"
+              maxlength="2"
+              inputmode="numeric"
+              pattern="(0[1-9]|[12][0-9]|3[01])"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
+              required
+            />
+
+            <label for="month" class="sr-only">Month</label>
+            <input
+              class="input-small"
+              type="text"
+              placeholder="MM"
+              id="month"
+              name="month"
+              maxlength="2"
+              inputmode="numeric"
+              pattern="(0[1-9]|1[0-2])"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
+              required
+            />
+
+            <label for="year" class="sr-only">Year</label>
+            <input
+              class="input-small"
+              type="text"
+              placeholder="YYYY"
+              id="year"
+              name="year"
+              maxlength="4"
+              inputmode="numeric"
+              pattern="(19[0-9]{2}|20[0-9]{2})"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,4)"
+              required
+            />
+          </div>
+          <!--date-field-container end-->
+        </fieldset>
+        <fieldset id="times">
+          <div class="fields-container">
+            <label for="hour" class="sr-only">Hour</label>
+            <p>Pick a time</p>
+            <input
+              class="input-small"
+              type="text"
+              placeholder="09"
+              id="hour"
+              name="hour"
+              maxlength="2"
+              inputmode="numeric"
+              pattern="(0[1-9]|1[0-2])"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
+              required
+            />
+
+            <label for="minute" class="sr-only">Minute</label>
+            <input
+              class="input-small"
+              type="text"
+              placeholder="00"
+              id="minute"
+              name="minute"
+              maxlength="2"
+              inputmode="numeric"
+              pattern="(0[1-9]|1[0-2])"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
+              required
+            />
+
+            <label for="ampm" class="sr-only">Time Period</label>
+            <select name="ampm" id="ampm">
+              <option value="am">AM</option>
+              <option value="pm">PM</option>
+            </select>
+          </div>
+          <!--fields container end-->
+        </fieldset>
+      </form>
+    </main>
     <footer-component></footer-component>
   </body>
 </html>
