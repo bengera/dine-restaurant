@@ -1,0 +1,61 @@
+@use "../abstracts/" as *;
+
+// GENERAL //
+
+input {
+  padding: 1rem;
+}
+
+input,
+textarea {
+  padding: 16px 20px;
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+// CLASS BASED STYLING
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  color: $color-cod-gray;
+  padding: 1.5rem;
+}
+
+.input-small {
+  width: 90px;
+}
+
+.fields-container.time {
+  display: flex;
+}
+
+.dropdown {
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+  }
+}
+
+// SCREENREADER
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

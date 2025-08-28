@@ -47,7 +47,7 @@
 
         <fieldset id="dates">
           <div class="fields-container">
-            <p>Pick a date</p>
+            <p class="dates__description">Pick a date</p>
             <label for="day" class="sr-only">Day</label>
             <!--0-9 digits only, consisting of 1 or 2 digits-->
             <input
@@ -94,9 +94,9 @@
           <!--date-field-container end-->
         </fieldset>
         <fieldset id="times">
-          <div class="fields-container">
+          <div class="fields-container time">
             <label for="hour" class="sr-only">Hour</label>
-            <p>Pick a time</p>
+            <p class="times__description">Pick a time</p>
             <input
               class="input-small"
               type="text"
@@ -125,10 +125,18 @@
             />
 
             <label for="ampm" class="sr-only">Time Period</label>
-            <select name="ampm" id="ampm">
-              <option value="am">AM</option>
-              <option value="pm">PM</option>
-            </select>
+            <div class="dropdown">
+              <ul class="dropdown__list">
+                <li class="dropdown__list-item">
+                  <span>AM</span>
+                  <img src="./images/icons/icon-arrow.svg" alt="" />
+                </li>
+
+                <li class="dropdown__list-item">
+                  <span>PM</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <!--fields container end-->
         </fieldset>
