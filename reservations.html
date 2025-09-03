@@ -124,18 +124,21 @@
               required
             />
 
-            <label for="ampm" class="sr-only">Time Period</label>
+            <!-- <label for="ampm" class="sr-only">Time Period</label> -->
+            <!-- Dropdown -->
             <div class="dropdown">
+              <button type="button" class="dropdown__toggle" id="ampm-button">
+                <span id="ampm-value">AM</span>
+                <img src="./images/icons/icon-arrow.svg" alt="icon-arrow" class="arrow" />
+              </button>
               <ul class="dropdown__list">
-                <li class="dropdown__list-item">
-                  <span>AM</span>
-                  <img src="./images/icons/icon-arrow.svg" alt="" />
+                <li class="dropdown__list-item" data-value="AM">
+                  <img src="./images/icons/icon-check.svg" alt="checkmark" class="check"
+                  />AM
                 </li>
-
-                <li class="dropdown__list-item">
-                  <span>PM</span>
-                </li>
+                <li class="dropdown__list-item" data-value="PM">PM</li>
               </ul>
+              <input type="hidden" name="ampm" id="ampm" value="AM" />
             </div>
           </div>
           <!--fields container end-->

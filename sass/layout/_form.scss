@@ -28,6 +28,7 @@ fieldset {
   border: 2px solid red;
   color: $color-cod-gray;
   padding: 1.5rem;
+  padding-bottom: 5rem;
 }
 
 .input-small {
@@ -38,13 +39,47 @@ fieldset {
   display: flex;
 }
 
+//DROPDOWN
 .dropdown {
+  position: relative;
+  width: 90px;
+  align-self: center;
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+  }
+
   &__list {
-    list-style: none;
+    position: absolute;
+    top: 40px;
+    width: 90%;
+    border: 1px solid black;
   }
 
   &__list-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    justify-content: flex-end;
   }
+}
+
+.arrow {
+  transition: transform 0.2s;
+}
+
+.arrow.flip {
+  transform: rotate(180deg);
 }
 
 // SCREENREADER
