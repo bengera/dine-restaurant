@@ -28,7 +28,7 @@ fieldset {
   border: 2px solid red;
   color: $color-cod-gray;
   padding: 1.5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
 }
 
 .input-small {
@@ -37,6 +37,11 @@ fieldset {
 
 .fields-container.time {
   display: flex;
+  gap: 5px;
+}
+
+.field-container input {
+  padding: 0 20px;
 }
 
 //DROPDOWN
@@ -51,6 +56,7 @@ fieldset {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
     width: 100%;
     // padding: 0.5rem;
     background-color: #fff;
@@ -61,9 +67,11 @@ fieldset {
   &__list {
     position: absolute;
     top: 50px;
-    width: 90%;
+    width: 100%;
     // border: 1px solid black;
     width: auto;
+    box-shadow: 0px 15px 25px 0px rgba(56, 66, 85, 0.24);
+    padding: 0.5rem 1.3rem;
   }
 
   &__list-item {
