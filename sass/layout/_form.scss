@@ -44,13 +44,15 @@ fieldset {
   position: relative;
   width: 90px;
   align-self: center;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 16px 20px;
 
   &__toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0.5rem;
+    // padding: 0.5rem;
     background-color: #fff;
     border: 0;
     cursor: pointer;
@@ -58,9 +60,10 @@ fieldset {
 
   &__list {
     position: absolute;
-    top: 40px;
+    top: 50px;
     width: 90%;
-    border: 1px solid black;
+    // border: 1px solid black;
+    width: auto;
   }
 
   &__list-item {
