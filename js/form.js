@@ -17,8 +17,14 @@ listItems.forEach((item) => {
     console.log(`${item.dataset.value} clicked`); // dataset gets data- attribute
     const value = item.dataset.value;
 
+    // Update values
     ampmValue.textContent = value;
     hiddenInput.value = value;
+
+    listItems.forEach((li) => li.classList.remove("selected"));
+    item.classList.add("selected");
+
+    // Reset Dropdown
     dropDownList.classList.remove("show");
     arrow.classList.remove("flip");
   });

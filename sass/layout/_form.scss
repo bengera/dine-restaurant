@@ -97,8 +97,12 @@ fieldset {
   }
 }
 
-.arrow {
-  // transition: transform 0.2s;
+.dropdown__list-item .checkmark {
+  visibility: hidden;
+}
+
+.dropdown__list-item.selected .checkmark {
+  visibility: visible;
 }
 
 .arrow.flip {
