@@ -98,6 +98,16 @@ fieldset {
   transform: rotate(180deg);
 }
 
+.times {
+  &__description.mobile {
+    color: Red;
+  }
+
+  &__description.tablet {
+    color: blue;
+  }
+}
+
 // SCREENREADER
 .sr-only {
   position: absolute;

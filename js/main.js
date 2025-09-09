@@ -14,6 +14,7 @@ const dropDownList = document.getElementById('dropdown-list');
 const arrow = document.querySelector('.arrow');
 
 
+
 const eventData = {
     "Family Gathering": {
         heading: "Family Gathering",
@@ -52,6 +53,8 @@ ampmButton.addEventListener('click', ()=> {
   dropDownList.classList.toggle('show');
   arrow.classList.toggle('flip');
 })
+
+
 
 // 1- for each list-item
 // 2- query select to find item with checkmark
@@ -118,6 +121,7 @@ eventButtons.forEach((button) => {
     
    
 })
+
 
 
 
