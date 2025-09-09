@@ -11,6 +11,7 @@ const eventImgSourceTablet = document.getElementById('event-src-tablet'); // get
 
 const ampmButton = document.getElementById('ampm-button');
 const dropDownList = document.getElementById('dropdown-list');
+const arrow = document.querySelector('.arrow');
 
 
 const eventData = {
@@ -49,7 +50,14 @@ const eventData = {
 ampmButton.addEventListener('click', ()=> {
   console.log('Dropdown button clicked')
   dropDownList.classList.toggle('show');
+  arrow.classList.toggle('flip');
 })
+
+// 1- for each list-item
+// 2- query select to find item with checkmark
+// 4- guard clause - if item contains checkmark - return
+// 4- else remove all checks
+// 5- add checkmark to query selected item in step 2
 
 
 eventButtons.forEach((button) => {
