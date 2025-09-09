@@ -40,6 +40,13 @@ fieldset {
   gap: 5px;
 }
 
+.fields-container {
+  @include mq(small) {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .field-container input {
   padding: 0 20px;
 }
