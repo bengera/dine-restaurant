@@ -17,7 +17,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, "index.html"),
         reservations: resolve(__dirname, "reservations.html"),
-        mainJS: resolve(__dirname, "main.js"),
+        mainJS: resolve(__dirname, "js/main.js"),
       },
     },
   },
