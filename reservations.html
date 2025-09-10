@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="color-scheme" content="light only" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="color-scheme" content="light only"/>
     <title>Reservations</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
@@ -22,7 +22,7 @@
   <body>
     <header class="header res">
       <div class="header__content">
-        <img src="./images/logo.svg" alt="logo" class="header__logo" />
+        <img src="./images/logo.svg" alt="logo" class="header__logo"/>
         <h1 class="header__heading fw-thin">Reservations</h1>
         <p class="header__description">
           We can’t wait to host you. If you have any special requirements please
@@ -35,16 +35,17 @@
       </div>
     </header>
     <main>
+      <section class="section-form">
       <form class="form" id="form">
         <div class="form-control">
           <label for="name" class="sr-only">Name</label>
-          <input type="text" placeholder="Name" id="name" />
+          <input type="text" placeholder="Name" id="name"/>
         </div>
 
         <!--EMAIL-->
         <div class="form-control">
           <label for="email" class="sr-only">Email Address</label>
-          <input type="email" placeholder="Email" id="email" />
+          <input type="email" placeholder="Email" id="email"/>
         </div>
 
         <fieldset id="dates">
@@ -133,7 +134,7 @@
             <div class="dropdown">
               <button type="button" class="dropdown__toggle" id="ampm-button">
                 <span id="ampm-value">AM</span>
-                <img src="./images/icons/icon-arrow.svg" alt="icon-arrow" class="arrow" />
+                <img src="./images/icons/icon-arrow.svg" alt="icon-arrow" class="arrow"/>
               </button>
               <ul class="dropdown__list" id="dropdown-list">
                 <li class="dropdown__list-item" data-value="AM">
@@ -148,7 +149,24 @@
           </div>
           <!--fields container end-->
         </fieldset>
+        <div class="num-people">
+           <button type="button" class="num-people__btn decrement"></button>
+          <label for="people" class="sr-only"></label>
+          <div class="num-people__text-container">
+           <input type="number"
+            class="num-people__num" 
+            id="people" 
+            name="people" 
+            placeholder="1"
+            value="4" 
+            min="1"
+            />
+          <span class="num-people__label">people</span>
+          </div>
+           <button type="button" class="num-people__btn increment"></button>
+        </div>
       </form>
+      </section>
     </main>
     <footer-component></footer-component>
   </body>

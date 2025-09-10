@@ -21,6 +21,7 @@ listItems.forEach((item) => {
     ampmValue.textContent = value;
     hiddenInput.value = value;
 
+    // Remove all checkmarks, add checkmark to clicked item with visibility -shown
     listItems.forEach((li) => li.classList.remove("selected"));
     item.classList.add("selected");
 
