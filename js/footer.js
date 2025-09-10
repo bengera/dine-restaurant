@@ -8,7 +8,7 @@ class Footer extends HTMLElement {
     <footer class="footer">
         <div class="footer__content">
           <div class="footer__left-content">
-          <img src="./images/logo.svg" alt="dine logo" class="footer__logo">
+          <img src="./images/icons/logo.svg" alt="dine logo" class="footer__logo">
         </div>
         <div class="footer__right-content">
           <div class="footer__contact-info fw-regular">
