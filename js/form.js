@@ -36,13 +36,10 @@ listItems.forEach((item) => {
 });
 
 incrementBtn.addEventListener("click", () => {
-  console.log("increment");
-  const currentNum = numPeople.value++;
-  console.log(currentNum);
+  numPeople.value++;
 });
 
 decrementBtn.addEventListener("click", () => {
-  console.log("increment");
-  const currentNum = numPeople.value--;
-  console.log(currentNum);
+  if (inputVal.value < 2) return;
+  numPeople.value--;
 });
