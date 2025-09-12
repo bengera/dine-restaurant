@@ -42,9 +42,13 @@ fieldset {
 .fields-container.time {
   display: flex;
   gap: 5px;
+  justify-content: space-evenly;
 }
 
 .fields-container {
+  display: flex;
+  gap: 5px;
+  justify-content: space-evenly;
   @include mq(small) {
     display: flex;
     align-items: center;

@@ -40,6 +40,6 @@ incrementBtn.addEventListener("click", () => {
 });
 
 decrementBtn.addEventListener("click", () => {
-  if (inputVal.value < 2) return;
+  if (numPeople.value < 2) return;
   numPeople.value--;
 });
