@@ -2,6 +2,10 @@ const ampmButton = document.getElementById("ampm-button");
 const dropDownList = document.getElementById("dropdown-list");
 const arrow = document.querySelector(".arrow");
 
+const incrementBtn = document.getElementById("btn-increment");
+const decrementBtn = document.getElementById("btn-decrement");
+const numPeople = document.getElementById("people");
+
 const ampmValue = document.getElementById("ampm-value"); // span AM/PM
 const hiddenInput = document.getElementById("ampm"); // hidden input
 const listItems = document.querySelectorAll(".dropdown__list-item"); // 2 dropdown items of AM / PM
@@ -29,4 +33,16 @@ listItems.forEach((item) => {
     dropDownList.classList.remove("show");
     arrow.classList.remove("flip");
   });
+});
+
+incrementBtn.addEventListener("click", () => {
+  console.log("increment");
+  const currentNum = numPeople.value++;
+  console.log(currentNum);
+});
+
+decrementBtn.addEventListener("click", () => {
+  console.log("increment");
+  const currentNum = numPeople.value--;
+  console.log(currentNum);
 });
