@@ -14,7 +14,7 @@ fieldset {
   border: 0;
   padding: 0;
   margin: 0;
-  margin-top: 1rem;
+  // margin-top: 1rem;
 }
 
 // CLASS BASED STYLING
@@ -22,7 +22,6 @@ fieldset {
 .form {
   display: flex;
   flex-direction: column;
-  // border: 2px solid red;
   color: $color-cod-gray;
   padding: 1.5rem;
   padding-bottom: 7rem;
@@ -60,12 +59,17 @@ fieldset {
 }
 
 .form fieldset {
-  padding: 1rem 0;
+  // padding: 1rem 0;
 }
 
 .form input {
   // padding: 1rem 0;
   padding: 1rem 0.5rem;
+}
+
+#dates,
+#times {
+  margin-top: 28px;
 }
 
 //DROPDOWN
@@ -122,10 +126,6 @@ fieldset {
 .dropdown__list-item.selected .checkmark {
   visibility: visible;
 }
-
-// .checkmark.selected {
-//   visibility: visible;
-// }
 
 .arrow.flip {
   transform: rotate(180deg);
@@ -186,6 +186,18 @@ fieldset {
   letter-spacing: 2.5px;
   cursor: pointer;
   margin-top: 1.5rem;
+}
+
+// DROPDOWN FIELDS
+
+.error-dropdown {
+  display: none;
+  font-size: 16px;
+}
+
+.error-dropdown.active {
+  display: block;
+  color: $color-error-red;
 }
 
 // SCREENREADER

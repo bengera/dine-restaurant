@@ -72,7 +72,7 @@ function checkInputs() {
     setSuccessFor(name);
   }
 
-  if (emailValue === "") {
+  if (!isEmail(emailValue)) {
     console.log("Email field cannot be empty");
     setErrorFor(email);
   } else {
@@ -82,24 +82,38 @@ function checkInputs() {
 }
 
 function setSuccessFor(input) {
-  console.log(`Setting success for ${input}`);
   input.style.color = "#25293A";
   input.style.borderColor = "#25293A";
 }
 
 function setErrorFor(input) {
-  console.log(`Setting error for ${input}`);
   input.style.color = "#F05B5B";
   input.style.borderColor = "#F05B5B";
 }
 // REGEX
 
+function isDay(value) {
+  return /^(0[1-9]|[12][0-9]|3[01])$/.test(value);
+}
+
+function isMonth(value) {
+  return /(0[1-9]|1[0-2])$/.test(value);
+}
+
+function isYear(value) {
+  return /(20[0-9]{2})$/.test(value);
+}
+
+function isHour(value) {
+  return /(0?[1-9]|1[0-2])$/.test(value);
+}
+
+function isMinute(value) {
+  return /([0-5][0-9])$/.test(value);
+}
+
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
   );
-}
-
-function isPhoneNumber(phoneNumber) {
-  return /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/.test(phoneNumber);
 }
