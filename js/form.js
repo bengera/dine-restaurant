@@ -65,11 +65,19 @@ function checkInputs() {
   const emailValue = email.value.trim();
 
   if (nameValue === "") {
-    console.log("Field cannot be empty");
+    console.log("Name field cannot be empty");
     setErrorFor(name);
   } else {
     console.log("Success");
     setSuccessFor(name);
+  }
+
+  if (emailValue === "") {
+    console.log("Email field cannot be empty");
+    setErrorFor(email);
+  } else {
+    console.log("Success");
+    setSuccessFor(email);
   }
 }
 
