@@ -154,7 +154,7 @@ fieldset {
   align-items: center;
   justify-content: space-between;
   font-weight: 700;
-  @include form-padding;
+  padding: 1rem 0 0.625em;
 
   &__btn {
     width: 20px;

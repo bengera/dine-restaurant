@@ -38,7 +38,7 @@
         <div class="form-control">
           <label for="name" class="sr-only">Name</label>
           <input type="text" placeholder="Name" id="name" name="name" aria-required="true"/>
-        <div id="dropdownError-name" class="error-dropdown">
+        <div class="error-dropdown">
           <small class="error-dropdown__message">This Field is required</small>
         </div>
         </div>
@@ -47,14 +47,14 @@
         <div class="form-control">
           <label for="email" class="sr-only">Email Address</label>
           <input type="email" placeholder="Email" id="email" aria-required="true"/>
-          <div id="dropdownError-email" class="error-dropdown">
+          <div class="error-dropdown">
           <small class="error-dropdown__message">This Field is required</small>
         </div>
         </div>
 
         <fieldset id="dates" aria-describedby="date-instructions">
           <legend class="dates__description">Pick a date</legend>
-          <div id="dropdownError-date" class="error-dropdown">
+          <div id="dropdownError" class="error-dropdown">
           <small class="error-dropdown__message">This Field is incomplete</small>
         </div>
           <div class="fields-container">
@@ -105,7 +105,7 @@
         </fieldset>
         <fieldset id="times" aria-describedby="time-instructions">
            <legend id="description-mobile" class="times__description mobile">Pick a time</legend>
-           <div id="dropdownError-date" class="error-dropdown">
+           <div id="dropdownError" class="error-dropdown">
           <small class="error-dropdown__message">This Field is incomplete</small>
         </div>
            <div class="fields-container time">
