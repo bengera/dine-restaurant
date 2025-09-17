@@ -87,16 +87,16 @@ function setSuccessFor(input) {
   if (errorDropdown) {
     errorDropdown.classList.remove("active");
   }
-  input.style.color = "#25293A";
-  input.style.borderColor = "#25293A";
+  input.classList.remove("error");
+  input.classList.add("success");
 }
 
 function setErrorFor(input) {
   const formControl = input.parentElement;
   const errorDropdown = formControl.querySelector(".error-dropdown");
   errorDropdown.classList.add("active");
-  input.style.color = "#F05B5B";
-  input.style.borderColor = "#F05B5B";
+  input.classList.remove("sucess");
+  input.classList.add("error");
 }
 // REGEX
 

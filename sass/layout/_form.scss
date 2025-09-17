@@ -67,6 +67,24 @@ fieldset {
   padding: 1rem 0.5rem;
 }
 
+input.success {
+  color: #25293a;
+  border-color: #25293a;
+}
+
+input.error {
+  color: $color-error-red;
+  border-color: $color-error-red;
+}
+
+input.error::placeholder {
+  color: $color-error-red;
+}
+
+input.success::placeholder {
+  color: #25293a;
+}
+
 #dates,
 #times {
   margin-top: 28px;
