@@ -4,6 +4,9 @@ const arrow = document.querySelector(".arrow");
 
 const name = document.getElementById("name");
 const email = document.getElementById("email");
+const day = document.getElementById("day");
+const month = document.getElementById("month");
+const year = document.getElementById("year");
 
 const incrementBtn = document.getElementById("btn-increment");
 const decrementBtn = document.getElementById("btn-decrement");
@@ -53,17 +56,27 @@ decrementBtn.addEventListener("click", () => {
   numPeople.value--;
 });
 
-// CHECK AND RESET INPUTS
+// RESET INPUTS
 window.addEventListener("DOMContentLoaded", function () {
   name.value = "";
   email.value = "";
+  day.value = "";
+  month.value = "";
+  year.value = "";
 });
 
+//CHECK INPUTS
 function checkInputs() {
-  console.log("Checking inputs");
   const nameValue = name.value.trim();
   const emailValue = email.value.trim();
+  const dayValue = day.value.trim();
+  const monthValue = month.value.trim();
+  const yearValue = year.value.trim();
+  console.log(dayValue, monthValue, yearValue);
 
+  if (!isDay(dayValue) || !isMonth(monthValue) || !isYear(yearValue)) {
+    console.error("One of the dates does not have the correct format");
+  }
   if (nameValue === "") {
     console.error("Name field cannot be empty");
     setErrorFor(name);
