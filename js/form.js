@@ -74,9 +74,6 @@ function checkInputs() {
   const yearValue = year.value.trim();
   console.log(dayValue, monthValue, yearValue);
 
-  if (!isDay(dayValue) || !isMonth(monthValue) || !isYear(yearValue)) {
-    console.error("One of the dates does not have the correct format");
-  }
   if (nameValue === "") {
     console.error("Name field cannot be empty");
     setErrorFor(name);
@@ -91,6 +88,11 @@ function checkInputs() {
   } else {
     console.log("Success");
     setSuccessFor(email);
+  }
+
+  if (!isDay(dayValue) || !isMonth(monthValue) || !isYear(yearValue)) {
+    console.error("One of the dates does not have the correct format");
+    setFieldErrorFor();
   }
 }
 
