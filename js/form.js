@@ -140,10 +140,8 @@ function setFieldErrorFor(inputs, fieldsetId) {
   const fieldset = document.getElementById(fieldsetId);
   const errorDropdown = fieldset.querySelector(".error-dropdown");
   errorDropdown.classList.add("active");
-  const fieldLegend = document.querySelector(".dates__description");
-  const fieldLegendTime = document.querySelector(".times__description");
-  fieldLegendTime.classList.add("active");
-  fieldLegend.classList.add("active");
+  const legend = fieldset.querySelector("legend");
+  if (legend) legend.classList.add("active");
 }
 
 function setFieldSuccessFor(inputs, fieldsetId) {
@@ -154,11 +152,8 @@ function setFieldSuccessFor(inputs, fieldsetId) {
   const fieldset = document.getElementById(fieldsetId);
   const errorDropdown = fieldset.querySelector(".error-dropdown");
   errorDropdown.classList.remove("active");
-
-  const fieldLegendDate = document.querySelector(".dates__description");
-  const fieldLegendTime = document.querySelector(".times__description");
-  fieldLegendTime.classList.remove("active");
-  fieldLegendDate.classList.remove("active");
+  const legend = fieldset.querySelector("legend");
+  if (legend) legend.classList.remove("active");
 }
 
 // REGEX
