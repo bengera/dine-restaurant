@@ -118,7 +118,6 @@
               name="hour"
               maxlength="2"
               inputmode="numeric"
-              pattern="(0?[1-9]|1[0-2])"
               oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
               required
             />
@@ -133,7 +132,6 @@
               name="minute"
               maxlength="2"
               inputmode="numeric"
-              pattern="([0-5][0-9])"
               oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
               required
             />

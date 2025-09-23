@@ -7,6 +7,8 @@ const email = document.getElementById("email");
 const day = document.getElementById("day");
 const month = document.getElementById("month");
 const year = document.getElementById("year");
+const hour = document.getElementById("hour");
+const minute = document.getElementById("minute");
 
 const incrementBtn = document.getElementById("btn-increment");
 const decrementBtn = document.getElementById("btn-decrement");
@@ -15,6 +17,7 @@ const numPeople = document.getElementById("people");
 const ampmValue = document.getElementById("ampm-value"); // span AM/PM
 const hiddenInput = document.getElementById("ampm"); // hidden input
 const listItems = document.querySelectorAll(".dropdown__list-item"); // 2 dropdown items of AM / PM
+const form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -72,7 +75,9 @@ function checkInputs() {
   const dayValue = day.value.trim();
   const monthValue = month.value.trim();
   const yearValue = year.value.trim();
-  console.log(dayValue, monthValue, yearValue);
+  const hourValue = hour.value.trim();
+  const minuteValue = minute.value.trim();
+  console.log(dayValue, monthValue, yearValue, hourValue, minuteValue);
 
   if (nameValue === "") {
     console.error("Name field cannot be empty");
@@ -97,6 +102,14 @@ function checkInputs() {
   } else {
     setFieldSuccessFor([day, month, year], "dates");
   }
+
+  if (!isHour(hourValue) || !isMinute(minuteValue)) {
+    console.error("One of the times does not have the correct format");
+    setFieldErrorFor([hour, minute], "times");
+  } else {
+    console.log("Success");
+    setFieldSuccessFor([hour, minute], "times");
+  }
 }
 
 // SINGLE FIELDS
@@ -113,7 +126,7 @@ function setSuccessFor(input) {
 function setErrorFor(input) {
   const formControl = input.parentElement;
   const errorDropdown = formControl.querySelector(".error-dropdown");
-  errorDropdown.classList.add("active");
+  input.classList.remove("success");
   input.classList.remove("sucess");
   input.classList.add("error");
 }
@@ -128,6 +141,8 @@ function setFieldErrorFor(inputs, fieldsetId) {
   const errorDropdown = fieldset.querySelector(".error-dropdown");
   errorDropdown.classList.add("active");
   const fieldLegend = document.querySelector(".dates__description");
+  const fieldLegendTime = document.querySelector(".times__description");
+  fieldLegendTime.classList.add("active");
   fieldLegend.classList.add("active");
 }
 
@@ -139,8 +154,11 @@ function setFieldSuccessFor(inputs, fieldsetId) {
   const fieldset = document.getElementById(fieldsetId);
   const errorDropdown = fieldset.querySelector(".error-dropdown");
   errorDropdown.classList.remove("active");
-  const fieldLegend = document.querySelector(".dates__description");
-  fieldLegend.classList.remove("active");
+
+  const fieldLegendDate = document.querySelector(".dates__description");
+  const fieldLegendTime = document.querySelector(".times__description");
+  fieldLegendTime.classList.remove("active");
+  fieldLegendDate.classList.remove("active");
 }
 
 // REGEX
@@ -150,19 +168,19 @@ function isDay(value) {
 }
 
 function isMonth(value) {
-  return /(0[1-9]|1[0-2])$/.test(value);
+  return /^(0[1-9]|1[0-2])$/.test(value);
 }
 
 function isYear(value) {
-  return /(20[0-9]{2})$/.test(value);
+  return /^(20[0-9]{2})$/.test(value);
 }
 
 function isHour(value) {
-  return /(0?[1-9]|1[0-2])$/.test(value);
+  return /^(0?[1-9]|1[0-2])$/.test(value);
 }
 
 function isMinute(value) {
-  return /([0-5][0-9])$/.test(value);
+  return /^([0-5][0-9])$/.test(value);
 }
 
 function isEmail(email) {

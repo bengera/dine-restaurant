@@ -98,6 +98,14 @@ input.success::placeholder {
   color: $color-error-red;
 }
 
+.times__description.mobile {
+  color: $color-cod-gray;
+}
+
+.times__description.mobile.active {
+  color: $color-error-red;
+}
+
 //DROPDOWN
 .dropdown {
   position: relative;
