@@ -90,12 +90,17 @@ function checkInputs() {
     setSuccessFor(email);
   }
 
+  //If any does not match, run error for all -- input // fieldset id
   if (!isDay(dayValue) || !isMonth(monthValue) || !isYear(yearValue)) {
     console.error("One of the dates does not have the correct format");
-    setFieldErrorFor();
+    setFieldErrorFor([day, month, year], "dates");
+  } else {
+    setFieldSuccessFor([day, month, year], "dates");
+    console.log("Success");
   }
 }
 
+// SINGLE FIELDS
 function setSuccessFor(input) {
   const formControl = input.parentElement;
   const errorDropdown = formControl.querySelector(".error-dropdown");
@@ -113,6 +118,22 @@ function setErrorFor(input) {
   input.classList.remove("sucess");
   input.classList.add("error");
 }
+
+// GROUP FIELDS
+function setFieldErrorFor(inputs, fieldsetId) {
+  inputs.forEach((input) => {
+    input.classList.remove("success");
+    input.classList.add("error");
+  });
+  const fieldset = document.getElementById(fieldsetId);
+  const errorDropdown = fieldset.querySelector(".error-dropdown");
+  errorDropdown.classList.add("active");
+  const fieldLegend = document.querySelector(".dates__description");
+  fieldLegend.classList.add("active");
+}
+
+function setFieldSuccessFor(inputs, fieldset) {}
+
 // REGEX
 
 function isDay(value) {
