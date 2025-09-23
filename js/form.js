@@ -96,7 +96,6 @@ function checkInputs() {
     setFieldErrorFor([day, month, year], "dates");
   } else {
     setFieldSuccessFor([day, month, year], "dates");
-    console.log("Success");
   }
 }
 
@@ -132,7 +131,17 @@ function setFieldErrorFor(inputs, fieldsetId) {
   fieldLegend.classList.add("active");
 }
 
-function setFieldSuccessFor(inputs, fieldset) {}
+function setFieldSuccessFor(inputs, fieldsetId) {
+  inputs.forEach((input) => {
+    input.classList.remove("error");
+    input.classList.add("success");
+  });
+  const fieldset = document.getElementById(fieldsetId);
+  const errorDropdown = fieldset.querySelector(".error-dropdown");
+  errorDropdown.classList.remove("active");
+  const fieldLegend = document.querySelector(".dates__description");
+  fieldLegend.classList.remove("active");
+}
 
 // REGEX
 
