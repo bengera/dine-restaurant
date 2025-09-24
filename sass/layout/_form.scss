@@ -220,6 +220,13 @@ input.success::placeholder {
   letter-spacing: 2.5px;
   cursor: pointer;
   margin-top: 1.5rem;
+  border: 2px solid black;
+
+  &:hover {
+    color: $color-cod-gray;
+    background-color: #fff;
+    border: 2px solid $color-cod-gray;
+  }
 }
 
 // DROPDOWN FIELDS
