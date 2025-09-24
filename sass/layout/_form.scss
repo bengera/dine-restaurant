@@ -264,3 +264,7 @@ input.success::placeholder {
 .num-people__num[type="number"] {
   -moz-appearance: textfield;
 }
+
+#ampm-value {
+  color: $color-cod-gray;
+}
