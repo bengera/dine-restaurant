@@ -106,6 +106,14 @@ input.success::placeholder {
   color: $color-error-red;
 }
 
+.times__description.tablet {
+  color: $color-cod-gray;
+}
+
+.times__description.tablet.active {
+  color: $color-error-red;
+}
+
 //DROPDOWN
 .dropdown {
   position: relative;

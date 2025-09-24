@@ -143,6 +143,8 @@ function setFieldErrorFor(inputs, fieldsetId) {
   errorDropdown.classList.add("active");
   const legend = fieldset.querySelector("legend");
   if (legend) legend.classList.add("active");
+  const legendTab = document.getElementById("description-tablet");
+  if (legendTab) legendTab.classList.add("active");
 }
 
 function setFieldSuccessFor(inputs, fieldsetId) {
@@ -155,6 +157,8 @@ function setFieldSuccessFor(inputs, fieldsetId) {
   errorDropdown.classList.remove("active");
   const legend = fieldset.querySelector("legend");
   if (legend) legend.classList.remove("active");
+  const legendTab = document.getElementById("description-tablet");
+  if (legendTab) legendTab.classList.remove("active");
 }
 
 // REGEX
