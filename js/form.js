@@ -129,6 +129,7 @@ function setErrorFor(input) {
   input.classList.remove("success");
   input.classList.remove("sucess");
   input.classList.add("error");
+  errorDropdown.classList.add("active");
 }
 
 // GROUP FIELDS
