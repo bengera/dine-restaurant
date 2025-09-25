@@ -31,6 +31,12 @@ fieldset {
   margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto;
+
+  @include mq(medium) {
+    padding: 2rem;
+    max-width: 71%;
+    max-width: 592px;
+  }
 }
 
 .input-small {
@@ -114,6 +120,9 @@ input.success::placeholder {
   color: $color-error-red;
 }
 
+.dates__description.mobile {
+  color: blue;
+}
 //DROPDOWN
 .dropdown {
   position: relative;
@@ -170,16 +179,6 @@ input.success::placeholder {
 
 .arrow.flip {
   transform: rotate(180deg);
-}
-
-.times {
-  &__description.mobile {
-    // color: Red;
-  }
-
-  &__description.tablet {
-    // color: blue;
-  }
 }
 
 .num-people input {
