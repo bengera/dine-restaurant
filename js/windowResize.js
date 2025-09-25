@@ -11,6 +11,7 @@ const datesDesTablet = document.querySelector(".dates__description.mobile");
     let myWidth = window.innerWidth;
     // console.log(myWidth);
     // your size calculation code here
+    // REFACTOR WITH CLASS ADD/REMOVE
     if (myWidth >= 480) {
       timeDesMobile.style.display = "none";
       timeDesTablet.style.display = "block";

@@ -121,8 +121,13 @@ input.success::placeholder {
 }
 
 .dates__description.mobile {
-  color: blue;
+  color: $color-cod-gray;
 }
+
+.dates__description.mobile.active {
+  color: $color-error-red;
+}
+
 //DROPDOWN
 .dropdown {
   position: relative;

@@ -145,6 +145,8 @@ function setFieldErrorFor(inputs, fieldsetId) {
   if (legend) legend.classList.add("active");
   const legendTab = document.getElementById("description-tablet");
   if (legendTab) legendTab.classList.add("active");
+  const legendTime = document.querySelector(".dates__description.mobile");
+  if (legendTime) legendTime.classList.add("active");
 }
 
 function setFieldSuccessFor(inputs, fieldsetId) {
