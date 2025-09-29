@@ -35,7 +35,8 @@ fieldset {
   @include mq(medium) {
     padding: 2rem;
     max-width: 71%;
-    max-width: 592px;
+    max-width: 500px;
+    margin-top: -176px;
   }
 }
 
@@ -48,15 +49,22 @@ fieldset {
   display: flex;
   gap: 5px;
   justify-content: space-evenly;
+
+  @include mq(small) {
+    justify-content: initial;
+    gap: 20px;
+  }
 }
 
 .fields-container {
   display: flex;
   gap: 5px;
   justify-content: space-evenly;
-  @include mq(small) {
+  @include mq(medium) {
+    gap: 20px;
     display: flex;
     align-items: center;
+    justify-content: start;
   }
 }
 
