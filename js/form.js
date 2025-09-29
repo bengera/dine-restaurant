@@ -50,8 +50,12 @@ listItems.forEach((item) => {
   });
 });
 
+const MAX_PEOPLE = 10;
+
 incrementBtn.addEventListener("click", () => {
-  numPeople.value++;
+  if (parseInt(numPeople.value, 10) < MAX_PEOPLE) {
+    numPeople.value++;
+  }
 });
 
 decrementBtn.addEventListener("click", () => {
@@ -127,7 +131,6 @@ function setErrorFor(input) {
   const formControl = input.parentElement;
   const errorDropdown = formControl.querySelector(".error-dropdown");
   input.classList.remove("success");
-  input.classList.remove("sucess");
   input.classList.add("error");
   errorDropdown.classList.add("active");
 }
@@ -161,6 +164,8 @@ function setFieldSuccessFor(inputs, fieldsetId) {
   if (legend) legend.classList.remove("active");
   const legendTab = document.getElementById("description-tablet");
   if (legendTab) legendTab.classList.remove("active");
+  const legendTime = document.querySelector(".dates__description.mobile");
+  if (legendTime) legendTime.classList.remove("active");
 }
 
 // REGEX

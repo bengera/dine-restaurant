@@ -201,6 +201,10 @@ input.success::placeholder {
   font-weight: 700;
   padding: 1rem 0 0.625em;
 
+  @include mq(medium) {
+    justify-content: space-around;
+  }
+
   &__btn {
     width: 20px;
     height: 20px;
