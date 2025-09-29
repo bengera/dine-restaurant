@@ -38,7 +38,7 @@
       ("/images/homepage/hero-bg-tablet.jpg" 1x),
       ("/images/homepage/hero-bg-tablet@2x.jpg" 2x)
     );
-    min-height: 70vh;
+    min-height: 100vh;
   }
 
   @include mq(large) {
@@ -59,11 +59,6 @@
 
   &__logo {
     margin: 0 auto;
-
-    @include mq(medium) {
-      padding: 3rem;
-      margin: 0;
-    }
 
     @include mq(large) {
       margin: 0;
@@ -104,7 +99,7 @@
     text-align: center;
 
     @include mq(medium) {
-      padding: 0;
+      padding: 25rem 1.5rem 0 1.5rem;
     }
 
     @include mq(large) {
