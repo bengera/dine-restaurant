@@ -41,25 +41,26 @@ fieldset {
 }
 
 .input-small {
-  width: 90px;
-  text-align: center;
+  width: 73px;
+  text-align: left;
+
+  // @include mq(small) {
+
+  // }
 }
 
 .fields-container.time {
   display: flex;
-  gap: 5px;
-  justify-content: space-evenly;
 
-  @include mq(small) {
-    justify-content: initial;
-    gap: 20px;
-  }
+  justify-content: left;
+  gap: 20px;
 }
 
 .fields-container {
   display: flex;
-  gap: 5px;
-  justify-content: space-evenly;
+  gap: 20px;
+  justify-content: left;
+
   @include mq(medium) {
     gap: 20px;
     display: flex;
@@ -78,7 +79,7 @@ fieldset {
 
 .form input {
   // padding: 1rem 0;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
 }
 
 input.success {
@@ -122,6 +123,7 @@ input.success::placeholder {
 
 .times__description.tablet {
   color: $color-cod-gray;
+  align-self: center;
 }
 
 .times__description.tablet.active {
@@ -130,6 +132,7 @@ input.success::placeholder {
 
 .dates__description.mobile {
   color: $color-cod-gray;
+  align-self: center;
 }
 
 .dates__description.mobile.active {
@@ -205,7 +208,7 @@ input.success::placeholder {
   border-bottom: 1px solid #dfdfdf;
   gap: 0.5rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   font-weight: 700;
   padding: 1rem 0 0.625em;
 
