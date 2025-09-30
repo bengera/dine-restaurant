@@ -20,8 +20,8 @@
   </head>
   <body>
     <header class="header res">
-      <div class="header__content">
-        <img src="logo.svg" alt="logo" class="header__logo"/>
+      <div class="header__content res">
+        <img src="logo.svg" alt="logo" class="header__logo res"/>
         <h1 class="header__heading fw-thin">Reservations</h1>
         <p class="header__description">
           We can’t wait to host you. If you have any special requirements please
@@ -63,7 +63,7 @@
 
             <label for="day" class="sr-only">Day</label>
 <!--day  pattern: (0[1-9]|[12][0-9]|3[01]) -->
-
+            <div class="dates__fields-container">
             <input
               class="input-small"
               type="text"
@@ -102,6 +102,7 @@
               required
             />
           </div>
+
           <!--date-field-container end-->
         </fieldset>
         <fieldset id="times" aria-describedby="time-instructions">

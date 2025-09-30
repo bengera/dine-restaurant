@@ -35,7 +35,7 @@ fieldset {
   @include mq(medium) {
     padding: 2rem;
     max-width: 71%;
-    max-width: 500px;
+    max-width: 540px;
     margin-top: -176px;
   }
 }
@@ -65,7 +65,7 @@ fieldset {
     gap: 20px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-evenly;
   }
 }
 
@@ -214,6 +214,7 @@ input.success::placeholder {
 
   @include mq(medium) {
     justify-content: space-around;
+    padding: 1.5rem;
   }
 
   &__btn {
