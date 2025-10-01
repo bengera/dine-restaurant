@@ -70,6 +70,7 @@
   &__logo.res {
     @include mq(medium) {
       padding: 4rem;
+      margin: 0;
     }
   }
 
@@ -79,6 +80,8 @@
     @include mq(medium) {
       font-size: fs(800);
       line-height: 64px;
+      margin: 0;
+      margin-bottom: 12px;
     }
 
     @include mq(large) {
@@ -98,6 +101,18 @@
     @include mq(large) {
       margin: 0;
       max-width: 428px;
+    }
+  }
+
+  &__description.res {
+    @include mq(medium) {
+      max-width: 490px;
+      margin: 0 auto;
+      margin-bottom: 19px;
+    }
+
+    @include mq(large) {
+      margin: 0;
     }
   }
 
