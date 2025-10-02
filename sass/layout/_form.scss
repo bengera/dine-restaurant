@@ -2,18 +2,6 @@
 
 // GENERAL //
 
-input,
-textarea {
-  // padding: 16px 20px;
-  border: none;
-  border-bottom: 1px solid #dfdfdf;
-  width: 100%;
-
-  @include mq(medium) {
-    font-size: 20px;
-  }
-}
-
 fieldset {
   border: 0;
   padding: 0;
@@ -45,9 +33,11 @@ fieldset {
 }
 
 .input-small {
-  width: 73px;
+  width: 103px;
   text-align: center;
   width: 93px;
+  border: 0;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .fields-container.time {
@@ -61,7 +51,8 @@ fieldset {
 
 .fields-container {
   display: flex;
-  gap: 20px;
+  gap: 35px;
+  // border: 2px solid red;
   justify-content: left;
 
   @include mq(medium) {
@@ -74,6 +65,13 @@ fieldset {
 
 .field-container input {
   @include form-padding;
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+  width: 100%;
+
+  @include mq(medium) {
+    font-size: 20px;
+  }
 }
 
 .form fieldset {
@@ -101,6 +99,23 @@ input.error::placeholder {
 
 input.success::placeholder {
   color: #25293a;
+}
+#name,
+#email {
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+  width: 100%;
+
+  @include mq(medium) {
+    font-size: 20px;
+  }
+}
+
+.dates {
+  &__fields-container {
+    display: flex;
+    gap: 20px;
+  }
 }
 
 #dates,
