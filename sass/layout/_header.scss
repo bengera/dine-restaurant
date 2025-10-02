@@ -117,7 +117,7 @@
   }
 
   &__content {
-    padding: 7rem 1.5rem 0 1.5rem;
+    padding: 14rem 1.5rem 0 1.5rem;
     text-align: center;
 
     @include mq(medium) {
@@ -134,6 +134,7 @@
   }
 
   &__content.res {
+    padding: 7rem 1.5rem 0 1.5rem;
     @include mq(medium) {
       color: red;
       padding: 0;
