@@ -27,8 +27,8 @@ fieldset {
 
   @include mq(medium) {
     padding: 2rem;
-    max-width: 71%;
-    max-width: 540px;
+
+    max-width: 496px;
     margin-top: -243px;
   }
 }
@@ -39,6 +39,10 @@ fieldset {
   width: 93px;
   border: 0;
   border-bottom: 1px solid #dfdfdf;
+
+  @include mq(medium) {
+    width: 102px;
+  }
 }
 
 .fields-container.time {
@@ -60,7 +64,7 @@ fieldset {
     gap: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 
@@ -116,6 +120,9 @@ input.success::placeholder {
   &__fields-container {
     display: flex;
     gap: 20px;
+    @include mq(medium) {
+      gap: 9px;
+    }
   }
 }
 
@@ -143,6 +150,7 @@ input.success::placeholder {
 .times__description.tablet {
   color: $color-cod-gray;
   align-self: center;
+  width: 110px;
 }
 
 .times__description.tablet.active {
@@ -320,4 +328,13 @@ input.success::placeholder {
   @include mq(medium) {
     display: none;
   }
+}
+
+.times__field-container {
+  width: 100%;
+  @include mq(medium) {
+    width: inherit;
+  }
+  justify-content: space-around;
+  display: flex;
 }
