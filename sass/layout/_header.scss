@@ -7,12 +7,14 @@
     ("/images/booking/hero-bg-mobile@2x.jpg" 2x)
   );
 
-  @include mq(medium) {
+  @include mq(mediumres) {
     background-image: image-set(
       ("/images/booking/hero-bg-tablet.jpg" 1x),
       ("/images/booking/hero-bg-tablet@2x.jpg" 2x)
     );
-    min-height: 61vh;
+    min-height: inherit;
+    height: 72vh;
+    background-size: auto;
   }
 
   @include mq(large) {
