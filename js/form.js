@@ -51,6 +51,7 @@ listItems.forEach((item) => {
 });
 
 const MAX_PEOPLE = 10;
+const MIN_PEOPLE = 1;
 
 incrementBtn.addEventListener("click", () => {
   if (parseInt(numPeople.value, 10) < MAX_PEOPLE) {

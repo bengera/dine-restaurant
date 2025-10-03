@@ -25,7 +25,7 @@ fieldset {
   margin-right: auto;
   box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.503223);
 
-  @include mq(medium) {
+  @include mq(mediumres) {
     padding: 2rem;
 
     max-width: 496px;
@@ -34,14 +34,14 @@ fieldset {
 }
 
 .input-small {
-  width: 103px;
+  width: clamp(70px, 20%, 120px);
   text-align: center;
   width: 93px;
   border: 0;
   border-bottom: 1px solid #dfdfdf;
 
-  @include mq(medium) {
-    width: 102px;
+  @include mq(mediumres) {
+    // width: 102px;
   }
 }
 
@@ -50,18 +50,18 @@ fieldset {
 
   justify-content: left;
   gap: 20px;
-  // border: 1px solid red;
+
   width: 100%;
 }
 
 .fields-container {
   display: flex;
-  gap: 35px;
-  // border: 2px solid red;
+  // gap: 35px;
+  gap: clamp(10px, 5vw, 35px);
   justify-content: left;
 
-  @include mq(medium) {
-    gap: 20px;
+  @include mq(mediumres) {
+    // gap: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,7 +74,7 @@ fieldset {
   border-bottom: 1px solid #dfdfdf;
   width: 100%;
 
-  @include mq(medium) {
+  @include mq(mediumres) {
     font-size: 20px;
   }
 }
@@ -111,7 +111,7 @@ input.success::placeholder {
   border-bottom: 1px solid #dfdfdf;
   width: 100%;
 
-  @include mq(medium) {
+  @include mq(mediumres) {
     font-size: 20px;
   }
 }
@@ -120,7 +120,7 @@ input.success::placeholder {
   &__fields-container {
     display: flex;
     gap: 20px;
-    @include mq(medium) {
+    @include mq(mediumres) {
       gap: 9px;
     }
   }
@@ -237,9 +237,9 @@ input.success::placeholder {
   align-items: center;
   justify-content: space-around;
   font-weight: 700;
-  padding: 1rem 0 0.625em;
+  padding: 1.4rem 0 0.625em;
 
-  @include mq(medium) {
+  @include mq(mediumres) {
     justify-content: space-around;
     padding: 1.5rem;
   }
@@ -325,15 +325,17 @@ input.success::placeholder {
 }
 
 #btn-reservation {
-  @include mq(medium) {
+  @include mq(mediumres) {
     display: none;
   }
 }
 
 .times__field-container {
-  width: 100%;
-  @include mq(medium) {
+  // width: 100%;
+  gap: clamp(10px, 5vw, 25px);
+  @include mq(mediumres) {
     width: inherit;
+    gap: 0;
   }
   justify-content: space-around;
   display: flex;
