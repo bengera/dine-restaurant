@@ -13,8 +13,8 @@
       ("/images/booking/hero-bg-tablet@2x.jpg" 2x)
     );
     min-height: inherit;
-    height: 72vh;
-    background-size: auto;
+    height: 58vh;
+    background-size: contain;
   }
 
   @include mq(large) {

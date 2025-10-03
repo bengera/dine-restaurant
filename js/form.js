@@ -54,14 +54,17 @@ const MAX_PEOPLE = 10;
 const MIN_PEOPLE = 1;
 
 incrementBtn.addEventListener("click", () => {
-  if (parseInt(numPeople.value, 10) < MAX_PEOPLE) {
-    numPeople.value++;
+  let current = parseInt(numPeople.value, 10) || 0;
+  if (current < MAX_PEOPLE) {
+    numPeople.value = current + 1;
   }
 });
 
 decrementBtn.addEventListener("click", () => {
-  if (numPeople.value < 2) return;
-  numPeople.value--;
+  let current = parseInt(numPeople.value, 10) || 0;
+  if (current > MIN_PEOPLE) {
+    numPeople.value = current - 1;
+  }
 });
 
 // RESET INPUTS
