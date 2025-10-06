@@ -14,7 +14,7 @@
     );
     min-height: inherit;
     height: 58vh;
-    background-size: contain;
+    background-size: cover;
   }
 
   @include mq(large) {
@@ -62,6 +62,10 @@
 
   &__logo {
     margin: 0 auto;
+
+    @include mq(medium) {
+      margin-bottom: 2rem;
+    }
 
     @include mq(large) {
       margin: 0;
@@ -138,7 +142,6 @@
   &__content.res {
     padding: 7rem 1.5rem 0 1.5rem;
     @include mq(medium) {
-      color: red;
       padding: 0;
     }
   }
