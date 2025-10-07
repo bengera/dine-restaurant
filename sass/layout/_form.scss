@@ -20,6 +20,15 @@ fieldset {
   // border: 1px solid red;
 }
 
+// .section-form {
+//   @include mq(large) {
+//     background-image: url(/images/patterns/pattern-lines.svg);
+//     background-repeat: no-repeat;
+//     background-position: 300px 450px;
+//     padding-bottom: 2rem;
+//   }
+// }
+
 // CLASS BASED STYLING
 
 .form {
@@ -44,6 +53,18 @@ fieldset {
 
   @include mq(large) {
     margin-right: 27rem;
+    position: relative;
+  }
+
+  &__shape {
+    display: none;
+    @include mq(large) {
+      display: block;
+      position: absolute;
+      top: 460px;
+      left: -67px;
+      z-index: -1;
+    }
   }
 }
 
