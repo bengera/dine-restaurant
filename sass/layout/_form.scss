@@ -2,6 +2,12 @@
 
 // GENERAL //
 
+.master-container-res {
+  max-width: 1950px;
+  // border: 2px solid red;
+  margin: 0 auto;
+}
+
 fieldset {
   border: 0;
   padding: 0;
@@ -29,6 +35,10 @@ fieldset {
     padding: 2rem;
     max-width: 496px;
     margin-top: -232px;
+  }
+
+  @include mq(large) {
+    margin-right: 27rem;
   }
 }
 
