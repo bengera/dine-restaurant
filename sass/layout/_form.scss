@@ -15,6 +15,11 @@ fieldset {
   // margin-top: 1rem;
 }
 
+//DEBUG FORM
+.form * {
+  // border: 1px solid red;
+}
+
 // CLASS BASED STYLING
 
 .form {
@@ -61,6 +66,10 @@ fieldset {
   gap: 20px;
 
   width: 100%;
+
+  @include mq(large) {
+    gap: 0;
+  }
 }
 
 .fields-container {
@@ -74,6 +83,7 @@ fieldset {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
   }
 }
 
@@ -130,7 +140,10 @@ input.success::placeholder {
     display: flex;
     gap: 20px;
     @include mq(mediumres) {
-      gap: 9px;
+      gap: 17px;
+    }
+
+    @include mq(large) {
     }
   }
 }
@@ -159,7 +172,7 @@ input.success::placeholder {
 .times__description.tablet {
   color: $color-cod-gray;
   align-self: center;
-  width: 110px;
+  width: inherit;
 }
 
 .times__description.tablet.active {
@@ -344,8 +357,8 @@ input.success::placeholder {
   gap: clamp(10px, 5vw, 25px);
   @include mq(mediumres) {
     width: inherit;
-    gap: 0;
+    gap: 20px;
   }
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex;
 }
