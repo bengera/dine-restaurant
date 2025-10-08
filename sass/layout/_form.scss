@@ -56,8 +56,11 @@ fieldset {
   }
 
   @include mq(large) {
-    margin-right: 27rem;
+    margin-right: 0;
     position: relative;
+    margin-top: -250px;
+    margin-bottom: 10rem;
+    margin-right: 415px;
   }
 
   &__shape {
