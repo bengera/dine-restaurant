@@ -20,11 +20,15 @@ fieldset {
   // border: 1px solid red;
 }
 
-// .section-form {
+.section-form {
+  position: relative;
+}
+
+// .section-form::after {
 //   @include mq(large) {
-//     background-image: url(/images/patterns/pattern-lines.svg);
+//     background-image: url(/images/patterns/pattern-curve-top-right.svg);
 //     background-repeat: no-repeat;
-//     background-position: 300px 450px;
+//     // background-position: 0 400px;
 //     padding-bottom: 2rem;
 //   }
 // }
@@ -48,7 +52,7 @@ fieldset {
   @include mq(mediumres) {
     padding: 2rem;
     max-width: 496px;
-    margin-top: -232px;
+    margin-top: -110px;
   }
 
   @include mq(large) {
@@ -64,6 +68,20 @@ fieldset {
       top: 460px;
       left: -67px;
       z-index: -1;
+    }
+  }
+
+  &__shape-bg {
+    display: none;
+    @include mq(large) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+      transform: translateX(-60%);
+      height: 191px;
+      z-index: -1;
+      bottom: -65px;
     }
   }
 }
