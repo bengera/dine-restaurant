@@ -76,12 +76,11 @@ fieldset {
     @include mq(large) {
       display: block;
       position: absolute;
-      bottom: 0;
-      width: 100vw;
-      transform: translateX(-60%);
+      width: 100%;
+      transform: translateX(-40%);
       height: 191px;
       z-index: -1;
-      bottom: -65px;
+      bottom: -100px;
     }
   }
 }
