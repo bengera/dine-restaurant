@@ -51,6 +51,7 @@
       ("/images/homepage/hero-bg-desktop.jpg" 1x),
       ("/images/homepage/hero-bg-desktop@2x.jpg" 2x)
     );
+    grid-column: 1/-1;
     background-position: right;
     background-size: cover;
   }
