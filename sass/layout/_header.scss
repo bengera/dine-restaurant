@@ -57,6 +57,7 @@
   }
 
   &__button {
+    margin: 0 auto;
     margin-bottom: 15rem; // stop image overlapping on Brave browser
     @include mq(medium) {
       margin-top: 52px;

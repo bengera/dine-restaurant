@@ -11,3 +11,10 @@
 .flex-group.mx-auto {
   justify-content: center;
 }
+
+.center-a {
+  display: inline-block;
+  height: 64px;
+  line-height: 64px; /* matches height to center vertically */
+  text-align: center; /* horizontal centering */
+}

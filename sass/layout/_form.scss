@@ -6,7 +6,7 @@
   @include mq(large) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 0.3fr;
   }
 }
 
@@ -67,7 +67,7 @@ fieldset {
   @include mq(large) {
     margin-right: 0;
     position: relative;
-    margin-top: -250px;
+    margin-top: -348px;
     margin-bottom: 10rem;
     margin-right: 415px;
   }
@@ -95,10 +95,11 @@ fieldset {
       display: block;
       position: absolute;
       width: 100%;
-      transform: translateX(-40%);
-      height: 191px;
+      // transform: translateX(-40%);
+      left: calc(100% - 100vw);
       z-index: -1;
-      bottom: -100px;
+      height: 306px;
+      bottom: -204px;
     }
   }
 }
@@ -320,6 +321,10 @@ input.success::placeholder {
   @include mq(mediumres) {
     justify-content: space-around;
     padding: 1.5rem;
+  }
+
+  @include mq(large) {
+    justify-content: space-between;
   }
 
   &__btn {
