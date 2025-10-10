@@ -33,17 +33,6 @@ fieldset {
   position: relative;
 }
 
-// .section-form::after {
-//   @include mq(large) {
-//     background-image: url(/images/patterns/pattern-curve-top-right.svg);
-//     background-repeat: no-repeat;
-//     // background-position: 0 400px;
-//     padding-bottom: 2rem;
-//   }
-// }
-
-// CLASS BASED STYLING
-
 .form {
   display: flex;
   flex-direction: column;
@@ -94,9 +83,10 @@ fieldset {
     @include mq(large) {
       display: block;
       position: absolute;
-      width: 100%;
-      // transform: translateX(-40%);
-      left: calc(100% - 100vw);
+      right: 100%;
+      left: auto;
+      width: 100vw;
+      max-width: none;
       z-index: -1;
       height: 306px;
       bottom: -204px;
