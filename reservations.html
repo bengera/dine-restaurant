@@ -53,7 +53,7 @@
         <!--EMAIL-->
         <div class="form-control">
           <label for="email" class="sr-only">Email Address</label>
-          <input type="email" placeholder="Email" id="email" aria-required="true"/>
+          <input type="email" placeholder="Email" id="email" name="email" aria-required="true"/>
           <div class="error-dropdown">
           <small class="error-dropdown__message">This Field is required</small>
         </div>
@@ -61,11 +61,11 @@
 
         <fieldset id="dates" aria-describedby="date-instructions">
           <legend class="dates__description">Pick a date</legend>
-          <div id="dropdownError" class="error-dropdown">
+          <div id="dropdownError-date" class="error-dropdown">
           <small class="error-dropdown__message">This Field is incomplete</small>
         </div>
           <div class="fields-container">
-          <legend class="dates__description mobile">Pick a date</legend>
+          <span class="dates__description mobile">Pick a date</span>
 
             <label for="day" class="sr-only">Day</label>
 <!--day  pattern: (0[1-9]|[12][0-9]|3[01]) -->
@@ -113,7 +113,7 @@
         </fieldset>
         <fieldset id="times" aria-describedby="time-instructions">
            <legend id="description-mobile" class="times__description mobile">Pick a time</legend>
-           <div id="dropdownError" class="error-dropdown">
+           <div id="dropdownError-time" class="error-dropdown">
           <small class="error-dropdown__message">This Field is incomplete</small>
         </div>
            <div class="fields-container time">
@@ -124,7 +124,7 @@
             <input
               class="input-small"
               type="text"
-              value="09"
+              placeholder="HH"
               id="hour"
               name="hour"
               maxlength="2"
@@ -138,7 +138,6 @@
             <input
               class="input-small"
               type="text"
-              value="00"
               id="minute"
               name="minute"
               maxlength="2"
@@ -163,7 +162,7 @@
                   />PM</li>
               </ul>
               <input type="hidden" name="ampm" id="ampm" value="AM" /> <!--ensure form submission data due to custom dropdown not sending values-->
-            </div>
+              <input type="hidden" name="ampm" id="ampm" value="AM" /> <!-- Custom dropdowns do not submit their selected value with the form, so this hidden input is updated via JavaScript to ensure the user's AM/PM choice is included in the form submission. -->
             </div>
           </div>
           <!--fields container end-->
