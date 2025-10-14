@@ -124,7 +124,7 @@
             <input
               class="input-small"
               type="text"
-              placeholder="HH"
+              placeholder="09"
               id="hour"
               name="hour"
               maxlength="2"
@@ -142,6 +142,7 @@
               name="minute"
               maxlength="2"
               inputmode="numeric"
+              placeholder="30"
               oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,2)"
               required
             />
@@ -161,8 +162,9 @@
                    <img src="./images/icons/icon-check.svg" alt="checkmark" class="checkmark"
                   />PM</li>
               </ul>
-              <input type="hidden" name="ampm" id="ampm" value="AM" /> <!--ensure form submission data due to custom dropdown not sending values-->
-              <input type="hidden" name="ampm" id="ampm" value="AM" /> <!-- Custom dropdowns do not submit their selected value with the form, so this hidden input is updated via JavaScript to ensure the user's AM/PM choice is included in the form submission. -->
+              <input type="hidden" name="ampm" id="ampm" value="AM" /> 
+              <input type="hidden" name="ampm" id="ampm" value="AM" /> 
+              <!-- Custom dropdowns do not submit their selected value with the form, so this hidden input is updated via JS to ensure the user's AM/PM choice is included in the form submission -->
             </div>
           </div>
           <!--fields container end-->

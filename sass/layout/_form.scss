@@ -21,12 +21,6 @@ fieldset {
   border: 0;
   padding: 0;
   margin: 0;
-  // margin-top: 1rem;
-}
-
-//DEBUG FORM
-.form * {
-  // border: 1px solid red;
 }
 
 .section-form {
@@ -144,10 +138,6 @@ fieldset {
   @include mq(mediumres) {
     font-size: 20px;
   }
-}
-
-.form fieldset {
-  // padding: 1rem 0;
 }
 
 .form input {
@@ -392,6 +382,7 @@ input.success::placeholder {
 /* Firefox */
 .num-people__num[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 #ampm-value {
