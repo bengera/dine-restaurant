@@ -18,9 +18,9 @@ Users should be able to:
   - The `Email Address` is not formatted correctly should show "Please use a valid email address"
   - Any of the `Pick a date` or `Pick a time` fields are empty should show "This field is incomplete"
 
-### Screenshot
+### Screenshots
 
-![]()
+![](screenshot.webp)
 
 ### Links
 
