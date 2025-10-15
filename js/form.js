@@ -54,7 +54,7 @@ const MAX_PEOPLE = 10;
 const MIN_PEOPLE = 1;
 
 incrementBtn.addEventListener("click", () => {
-  let current = parseInt(numPeople.value, 10) || 0;
+  const current = parseInt(numPeople.value, 10) || 0;
   if (current < MAX_PEOPLE) {
     numPeople.value = current + 1;
   }
@@ -194,8 +194,8 @@ function isMinute(value) {
   return /^([0-5][0-9])$/.test(value);
 }
 
-function isEmail(email) {
+function isEmail(emailInput) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
+    emailInput
   );
 }
