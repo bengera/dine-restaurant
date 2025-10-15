@@ -11,7 +11,7 @@
 }
 
 .master-container-res {
-  max-width: 1950px;
+  max-width: 121.875rem;
   // border: 2px solid red;
   margin: 0 auto;
   grid-column: 3/-1;
@@ -48,7 +48,6 @@ fieldset {
   }
 
   @include mq(large) {
-    margin-right: 0;
     position: relative;
     margin-top: -348px;
     margin-bottom: 10rem;
@@ -178,9 +177,6 @@ input.success::placeholder {
     gap: 20px;
     @include mq(mediumres) {
       gap: 17px;
-    }
-
-    @include mq(large) {
     }
   }
 }

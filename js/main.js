@@ -49,8 +49,8 @@ const eventData = {
 
 eventButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
-      eventButtons.forEach((button) => {
-        button.classList.remove("active");
+      eventButtons.forEach((btn) => {
+        btn.classList.remove("active");
       });
       button.classList.add("active");
       let target = e.target.innerText.toLowerCase()

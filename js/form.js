@@ -61,7 +61,7 @@ incrementBtn.addEventListener("click", () => {
 });
 
 decrementBtn.addEventListener("click", () => {
-  let current = parseInt(numPeople.value, 10) || 0;
+  const current = parseInt(numPeople.value, 10) || 0;
   if (current > MIN_PEOPLE) {
     numPeople.value = current - 1;
   }
