@@ -63,3 +63,8 @@
     }
   }
 }
+
+a[href^="tel"] {
+  text-decoration: none;
+  color: $color-white;
+}

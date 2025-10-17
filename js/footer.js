@@ -15,7 +15,7 @@ class Footer extends HTMLElement {
             <address class="footer__contact-info uppercase">
               Marthwaite, Sedbergh <br>
               Cumbria <br>
-              +00 44 123 4567
+                <a href="tel:+00 44 123 4567" aria-label="Call us at +00 44 123 4567">+00 44 123 4567</a>
             </address>
           </div> <!--contact info end-->
           <div class="footer__opening-times fw-regular">
