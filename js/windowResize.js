@@ -8,7 +8,7 @@ const datesDesTablet = document.querySelector(".dates__description.mobile");
   window.onload = displayWindowSize;
 
   function displayWindowSize() {
-    let myWidth = window.innerWidth;
+    const myWidth = window.innerWidth;
 
     // REFACTOR WITH CLASS ADD/REMOVE
     if (myWidth >= 480) {

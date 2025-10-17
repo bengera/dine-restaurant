@@ -43,7 +43,7 @@ fieldset {
 
   @include mq(mediumres) {
     padding: 2rem;
-    max-width: 496px;
+    max-width: 31rem;
     margin-top: -90px;
   }
 
@@ -324,7 +324,6 @@ input.success::placeholder {
 .btn-submit {
   background-color: $color-cod-gray;
   color: $color-white;
-  border: 0;
   text-transform: uppercase;
   padding: 1rem 0.5rem;
   font-weight: 600;
