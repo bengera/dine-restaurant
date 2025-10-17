@@ -3,8 +3,8 @@
 // RESERVATION PAGE //
 .header.res {
   background-image: image-set(
-    ("/images/booking/hero-bg-mobile.jpg" 1x),
-    ("/images/booking/hero-bg-mobile@2x.jpg" 2x)
+    url("/images/booking/hero-bg-mobile.jpg") 1x,
+    url("/images/booking/hero-bg-desktop.jpg") 2x
   );
 
   @include mq(mediumres) {
