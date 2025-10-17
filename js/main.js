@@ -53,7 +53,7 @@ eventButtons.forEach((button) => {
         btn.classList.remove("active");
       });
       button.classList.add("active");
-      let target = e.target.innerText.toLowerCase()
+      const target = e.target.innerText.toLowerCase()
 
       switch (target) {
         case "family gathering":
